@@ -6,26 +6,23 @@ The standalone AXP6 decoder bundle (`donald_decode_v2.zip` per the v4 handoff §
 |---|---|---|
 | `aurexis_decode.py` | ✓ Present at `/home/user/Crypscan/aurexis_decode.py` (737 lines) | The source-of-truth for `01_AXP6_ARCHITECTURE_DIGEST.md`. Every line citation in §1–§12 of that doc points here. |
 | `DECODE_GUIDE.md` | ✓ Present at `/home/user/Crypscan/DECODE_GUIDE.md` | User-facing decoder manual. Cited in `02_FAILURE_MODEL_ANALYSIS.md` §1.5 (deployment shape) and §2 (the "Vince sends you a PNG file" line). |
-| `sample-2.mp4.axp6.png` | ⚠ Not loaded (Google Drive link only — see below) | The 30 MB video encoded as an 11032×13120 PNG. Demonstration artifact; not required for Phase 0. |
+| `sample-2.mp4.axp6.png` | ✓ Available as a GitHub Release asset on this repo (verified 2026-05-03) | The 30 MB video encoded as an 11032×13120 PNG (PNG-on-disk size 36,203,687 bytes; bit_depth 2; color_type 3). Direct download: `https://github.com/bigbugnowadaze/Crypscan/releases/download/png/sample-2.mp4.axp6.png`. Demonstration artifact; not required for Phase 0. See `ADDENDUM_01_img2phox_integration.md` §7 for the verification details. |
 
-## On the sample carrier PNG
+## On the sample carrier PNG (updated 2026-05-03)
 
-The handoff cites a 30 MB video encoded as an 11032×13120 carrier as a "proven working" demonstration artifact. The user noted this file is too large to upload to GitHub or to the Cowork uploads area and provided a Google Drive link.
+The user uploaded the sample carrier as a GitHub Release asset on this repo (release tag `png`, asset name `sample-2.mp4.axp6.png`). It is now reachable at:
 
-**Phase 0 did not load this PNG.** The reasons:
+```
+https://github.com/bigbugnowadaze/Crypscan/releases/download/png/sample-2.mp4.axp6.png
+```
 
-1. Phase 0 is *proposal authoring*. The architecture digest in `01_AXP6_ARCHITECTURE_DIGEST.md` is sourced from the `aurexis_decode.py` source code, not from a roundtrip test of the sample carrier.
-2. The carrier's stated dimensions (11032×13120 = 144,739,840 pixels) are honored verbatim wherever cited, e.g., in `05_INFORMATION_DENSITY_ANALYSIS.md` §1.
-3. Loading the PNG via WebFetch from Google Drive is unreliable for files of this size and Drive's anti-scraping behavior may block automated downloads.
+Verified during the addendum pass (`ADDENDUM_01_img2phox_integration.md` §7):
 
-**For Phase 1**, if the partners want the sample carrier accessible to the development environment, recommended paths in order of preference:
+- File size: 36,203,687 bytes.
+- PNG signature: OK.
+- IHDR: width=11032, height=13120, bit_depth=2, color_type=3 — matches `aurexis_decode.py` line 84 expectations and `05_INFORMATION_DENSITY_ANALYSIS.md` §1's stated dimensions.
 
-1. **GitHub Release asset on this repo.** GitHub releases support assets up to 2 GB per file. Attach the 30 MB PNG as a release asset and reference its URL in this repo's README. This is the simplest path and gives a stable URL.
-2. **`split -b 20m` then reassemble.** Split the PNG into ~20 MB chunks that fit GitHub's regular file size limit, commit them under `refs/donald_decode_v2/sample/`, and document the reassembly command in the INDEX. Keeps the artifact in-tree.
-3. **Git LFS.** Standard git extension for large files; requires LFS configured on the repo.
-4. **Direct upload to a stable URL not behind anti-scraping.** A self-hosted bucket, S3, etc. Less convenient than (1) but works.
-
-None of these is required for Phase 0; all of them are reasonable for Phase 1.
+Phase 0 did not load this PNG (Phase 0 is proposal authoring, not roundtrip verification — the architecture digest in `01_AXP6_ARCHITECTURE_DIGEST.md` is sourced from `aurexis_decode.py`'s source code). For Phase 1 it is a non-blocking dependency: download via `curl` from the release URL above and treat as a fixture.
 
 ## On the inner decoder details
 
