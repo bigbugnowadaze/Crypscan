@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260503T231233Z",
+  "spike_version": "2.0",
+  "pixel_bit_depth": 8,
+  "payload_size": 25923,
+  "compressed_size": 4177,
+  "rs_encoded_size": 4849,
+  "n_germs": 995,
+  "png_dimensions": [
+    944,
+    944
+  ],
+  "png_bytes": 280968,
+  "expected_sha256": "dfaa74d461e90f662ce4ef128092cc84dc921e3f8684bb87135b79dcde414d13",
+  "gate_pass": false,
+  "decode_error": "error: brotli: decoder failed",
+  "wall_time_total_s": 6.30666122599996,
+  "wall_time_encode_s": 0.2251541850000649,
+  "wall_time_decode_s": 6.038009378999959
+}
