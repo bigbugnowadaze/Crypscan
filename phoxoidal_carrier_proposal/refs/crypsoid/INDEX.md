@@ -15,13 +15,10 @@ The Phase 0 package cites the following CRYPSOID files. Clone the repo and read 
 | `reports/PROJECT_STATE.md` | Running status; engineering history; what is and is not verified |
 | `tools/crypsorender/math/germ.py` | The 5-coefficient germ basis (lines 23–30); forward Newton solver `closest_point_on_germ()` (lines 54–95); synthetic germ fitter `fit_synthetic_germs_5()` (lines 105–168); coefficient bounds (lines 162–166) |
 | `tools/crypsorender/io/phox_loader.py` | `.3dphox` reader (~250 LoC) — useful for understanding what the format spec produces in code |
+| `tools/img2phox/` (full directory; 26 files, 5,872 lines) | The image → 3D phoxoidal scene reconstruction pipeline. See `ADDENDUM_01_img2phox_integration.md` for the full inventory. Cited heavily by the addendum; not by the original Phase 0 package because the directory was not present in the clone Phase 0 was authored against. |
+| `docs/img2phox_spec.md` | Authoritative spec for the image→`.3dphox` compiler (Phase F). Cited in `ADDENDUM_01_img2phox_integration.md` §2. |
+| `docs/v40_native_germ_chunks_spec.md` | v40 format extension for native germ chunks (`germ_5coef_f16`, `germ_index_u32`). Referenced in `03_PHOXOIDAL_CARRIER_ARCHITECTURE.md` §2 layer 4 and `ADDENDUM_01` §2.3. |
 
-## Notes on the user's "tools/img2phox/" reference
+## On the original Phase 0 note about `tools/img2phox/`
 
-The user's task description mentioned reading "tools/img2phox/" thoroughly. CRYPSOID's `tools/` does not contain a directory of that exact name. The closest equivalents are:
-
-- `tools/crypsorender/` — the renderer (~1,600 LoC pure numpy), with subdirectories `io/`, `math/`, `pipeline/`, `output/`. This is the forward-direction (scene → image) tool.
-- `tools/phoxbench/` — the benchmark harness for the killer-ratio measurement.
-- `recovery_v2/tools/phoxoid_convert.py` — referenced in `docs/thesis_digest.md` line 109 as the v0 PLY→`.phox.json` converter (a fitting tool, not an image extractor).
-
-The Phase 0 package read all three of the above plus the cited `docs/` and `reports/` files. If the user meant a specific other directory, it isn't in the public repo as of the cloned commit and the user should clarify.
+An earlier version of this index noted that `tools/img2phox/` did not exist in the CRYPSOID clone Phase 0 was authored against. That note was correct at the time and is now superseded — the directory is present in the current CRYPSOID HEAD as of 2026-05-03. The addendum (`ADDENDUM_01_img2phox_integration.md`) reflects the corrected state and re-scopes Phase 1 estimates accordingly.
