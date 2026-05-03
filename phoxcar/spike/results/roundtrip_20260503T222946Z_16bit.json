@@ -1,0 +1,53 @@
+{
+  "timestamp": "20260503T222946Z",
+  "spike_version": "0.1",
+  "payload_size": 25939,
+  "compressed_size": 5012,
+  "n_germs": 1015,
+  "png_dimensions": [
+    944,
+    944
+  ],
+  "png_bytes": 1132356,
+  "expected_sha256": "8ea5726c52eaa8a9eebb6ef9191f3b4b412810b16ab307e339bbc440bc56d5e3",
+  "actual_sha256": "8ea5726c52eaa8a9eebb6ef9191f3b4b412810b16ab307e339bbc440bc56d5e3",
+  "sha256_ok": true,
+  "size_ok": true,
+  "extract_residual_max": 0.0001162157700515861,
+  "extract_residual_mean": 0.00010978656983615798,
+  "per_coef_rmse": [
+    9.386986912888145e-06,
+    9.569220769682767e-06,
+    3.3460356202940783e-06,
+    3.344590005439903e-06,
+    2.8697685068259354e-06
+  ],
+  "per_coef_max_abs": [
+    2.8060824355524705e-05,
+    3.208250097697096e-05,
+    1.1191841393198843e-05,
+    1.0404949974840427e-05,
+    8.55049298265076e-06
+  ],
+  "quant_step": [
+    0.00784313725490196,
+    0.00784313725490196,
+    0.00784313725490196,
+    0.00784313725490196,
+    0.00784313725490196
+  ],
+  "rmse_ok": true,
+  "wall_time_total_s": 0.30885699999998906,
+  "wall_time_encode_s": 0.1885286950000591,
+  "wall_time_decode_s": 0.04329634200007604,
+  "gate_pass": true,
+  "params": {
+    "sigma": 4.0,
+    "half_size": 12,
+    "amp": 0.11,
+    "baseline": 0.5,
+    "spacing": 28,
+    "margin": 24,
+    "pixel_bit_depth": 16
+  }
+}
