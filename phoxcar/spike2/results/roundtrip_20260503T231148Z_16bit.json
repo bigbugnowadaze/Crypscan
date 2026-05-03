@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260503T231148Z",
+  "spike_version": "2.0",
+  "pixel_bit_depth": 16,
+  "payload_size": 25923,
+  "compressed_size": 4177,
+  "rs_encoded_size": 4849,
+  "n_germs": 995,
+  "png_dimensions": [
+    944,
+    944
+  ],
+  "png_bytes": 975274,
+  "expected_sha256": "dfaa74d461e90f662ce4ef128092cc84dc921e3f8684bb87135b79dcde414d13",
+  "actual_sha256": "dfaa74d461e90f662ce4ef128092cc84dc921e3f8684bb87135b79dcde414d13",
+  "sha256_ok": true,
+  "size_ok": true,
+  "sign_flips_applied": 430,
+  "extract_residual_max": 1.2110043564965691,
+  "extract_residual_mean": 0.008424242034567255,
+  "rs_frames_corrected": 10,
+  "rs_bytes_corrected": 54,
+  "rs_frames_failed": [],
+  "wall_time_total_s": 6.177202963999889,
+  "wall_time_encode_s": 0.282350254999983,
+  "wall_time_decode_s": 5.853176165999912,
+  "gate_pass": true
+}
