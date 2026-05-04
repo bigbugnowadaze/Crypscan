@@ -220,3 +220,75 @@ Then capture per the existing protocol (close enough that the carrier fills
 - `results/debug_clahe_05.png` — CLAHE-contrast-enhanced version (also failed
   ArUco; not a contrast issue)
 
+---
+
+## Run 4: Asus laptop, properly-displayed (3 captures, 2026-05-04 ~19Z)
+
+After Bug verified the file integrity and re-displayed `reference_carrier.png`
+in fullscreen Chrome (F11) at native 1:1 resolution, three more captures from
+the S21 FE.
+
+| Layer | Result |
+|---|---|
+| ArUco pose | **3/3 succeeded** — markers correctly detected, all canonical IDs found |
+| Pilot intensity-transform fit | succeeded for all 3 |
+| Manifest-magic decode | **0/3 matched `PHX1`** — same failure mode as run 1 (codebook NN returns wrong bytes) |
+
+### Magic byte analysis
+
+```
+Expected:  50485831  (PHX1 = P, H, X, 1)
+Cap 01:    911658b6  byte 2 (X) ✓; rest wrong
+Cap 02:    1b160fb6  none correct
+Cap 03:    1b1658b6  byte 2 (X) ✓; rest wrong
+```
+
+Different per-capture errors, same structural failure: per-germ codebook NN is
+unreliable on real captures.
+
+### What changed vs run 1 (phone-on-phone)
+
+- **Pose: 100% (was 75%).** Real monitor's larger marker pixels and lower
+  subpixel pitch make ArUco detection trivially robust.
+- **Inner decode: still 0%.** Even with cleaner display + camera capture,
+  the continuous-coefficient catastrophe-germ codebook NN cannot classify
+  256 codewords from real-world captures.
+
+### What this confirms
+
+This is **direct empirical confirmation of ADDENDUM_04's prior-art prediction.**
+The screen-camera channel destroys subtle continuous-grayscale modulation
+regardless of which screen is used. Better displays improve pose, but the
+inner decode failure is at the substrate level, not the capture-pathway level.
+
+`debug_manifest_zoom_run4_01.png` shows the canonical germ field side-by-side
+with the rectified capture: visibly better than phone-on-phone (much less
+high-frequency moiré), but the per-germ feature-to-noise ratio is still
+insufficient for 256-way classification at amp=0.30.
+
+### Files in run 4
+
+- `results/debug_rectified_run4_01.png` — rectified frame for capture 1
+- `results/debug_manifest_zoom_run4_01.png` — side-by-side canonical vs rectified
+- `results/spike8b_results_run4_asus_correct_display.json` — per-capture results
+
+## Conclusion across all 4 runs
+
+| Run | Display | Pose | Inner decode | Diagnosis |
+|---|---|---|---|---|
+| 1 | phone screen | 6/8 | 0/6 | screen-camera moiré |
+| 2 | Asus, broken file | 0/9 | n/a | display setup |
+| 3 | Asus, broken file | 0/3 | n/a | display setup |
+| 4 | Asus, fixed file + F11 | 3/3 | 0/3 | substrate-level channel mismatch |
+
+**P3.A's pose layer (ArUco) works in real-world capture.**
+**P3.A's inner substrate (continuous catastrophe-germ codebook) does not.**
+The failure is exactly the one ADDENDUM_04 predicted from prior art: subtle
+continuous-grayscale modulation at amp=0.30 is the regime the screen-camera
+channel destroys.
+
+The path forward is not more captures. It's **spike-9A** (per ADDENDUM_04 §5):
+synthetic moiré-distortion harness as a closed-loop test bed, then evaluate
+substrate variants (discrete classifier, increased amp, mid-band DCT, bandpass
+decode) against it before committing to any of them.
+
