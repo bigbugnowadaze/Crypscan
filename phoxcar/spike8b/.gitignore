@@ -1,0 +1,15 @@
+# Spike-8B captures live here, but raw photos are NOT committed to git.
+# The partnership saves their phone captures to captures/raw/, which is
+# gitignored. Only the analysis report (results/SPIKE8B_REPORT.md) and
+# any specifically-flagged interesting captures are committed.
+
+captures/raw/
+captures/processed/
+captures/*.jpg
+captures/*.jpeg
+captures/*.JPG
+captures/*.JPEG
+captures/*.png
+captures/*.PNG
+captures/*.heic
+captures/*.HEIC

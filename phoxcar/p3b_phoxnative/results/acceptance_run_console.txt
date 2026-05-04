@@ -1,0 +1,136 @@
+======================================================================
+  phoxcar P3.B — phoxoidal-native fiducial acceptance gate
+======================================================================
+
+  payload size       : 1,095
+  expected sha256    : 85ee8a62adac3e71278628092f25e57a...
+
+  ENCODING (codebook + pilots + phoxoidal corner clusters + manifest, 8-bit) ...
+    canvas: [1280, 1280], n_payload_germs: 514
+
+  SANITY: decode unperturbed carrier ...
+    SHA-256 pass: True
+
+  GEOMETRIC SWEEP
+    [PASS P+] translation_x        sev=0        1.04s
+    [PASS P+] translation_x        sev=10       0.96s
+    [PASS P+] translation_x        sev=30       0.96s
+    [PASS P+] translation_x        sev=60       0.97s
+    [FAIL P-] translation_x        sev=100      0.90s  (pose failed: weak corners (NCC < 0.4): ['NE'])
+    [PASS P+] translation_y        sev=0        0.98s
+    [PASS P+] translation_y        sev=10       0.96s
+    [PASS P+] translation_y        sev=30       0.96s
+    [PASS P+] translation_y        sev=60       0.97s
+    [FAIL P+] translation_y        sev=100      0.98s  (manifest parse failed: manifest magic mismatch: got 91485890)
+    [PASS P+] subpixel             sev=0.0      0.97s
+    [PASS P+] subpixel             sev=0.25     1.00s
+    [PASS P+] subpixel             sev=0.5      1.01s
+    [PASS P+] subpixel             sev=0.75     1.00s
+    [PASS P+] rotation             sev=0        0.97s
+    [PASS P+] rotation             sev=5        0.97s
+    [FAIL P-] rotation             sev=15       0.92s  (pose failed: weak corners (NCC < 0.4): ['NW', 'NE', 'SW', 'SE'])
+    [FAIL P-] rotation             sev=30       0.91s  (pose failed: weak corners (NCC < 0.4): ['NW', 'NE', 'SW', 'SE'])
+    [FAIL P-] rotation             sev=45       0.90s  (pose failed: weak corners (NCC < 0.4): ['NW', 'NE', 'SW', 'SE'])
+    [FAIL P-] rotation             sev=90       0.91s  (pose failed: weak corners (NCC < 0.4): ['NW', 'SE'])
+    [FAIL P-] rotation             sev=135      0.90s  (pose failed: weak corners (NCC < 0.4): ['NW', 'NE', 'SW', 'SE'])
+    [FAIL P-] rotation             sev=180      0.90s  (pose failed: weak corners (NCC < 0.4): ['NW', 'NE', 'SW'])
+    [FAIL P-] rotation             sev=270      0.92s  (pose failed: weak corners (NCC < 0.4): ['NE'])
+    [FAIL P-] scale                sev=0.5      0.88s  (pose failed: weak corners (NCC < 0.4): ['NW', 'NE', 'SW', 'SE'])
+    [PASS P+] scale                sev=0.7      0.95s
+    [PASS P+] scale                sev=0.85     0.96s
+    [PASS P+] scale                sev=1.0      0.98s
+    [FAIL P-] scale                sev=1.18     0.92s  (pose failed: weak corners (NCC < 0.4): ['NW', 'SW', 'SE'])
+    [FAIL P-] scale                sev=1.4      0.91s  (pose failed: weak corners (NCC < 0.4): ['NW', 'SW', 'SE'])
+    [FAIL P-] scale                sev=1.7      0.91s  (pose failed: weak corners (NCC < 0.4): ['NW', 'SW', 'SE'])
+    [FAIL P-] scale                sev=2.0      0.91s  (pose failed: weak corners (NCC < 0.4): ['SW', 'SE'])
+    [PASS P+] shear                sev=0        1.01s
+    [PASS P+] shear                sev=2        0.98s
+    [PASS P+] shear                sev=5        0.99s
+    [FAIL P-] shear                sev=10       0.91s  (pose failed: weak corners (NCC < 0.4): ['NE', 'SW'])
+    [FAIL P-] shear                sev=15       0.89s  (pose failed: weak corners (NCC < 0.4): ['NE', 'SW'])
+/home/user/Crypscan/phoxcar/p3b_phoxnative/geometric_noise.py:114: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `ProjectiveTransform.from_estimate` class constructor instead.
+  if not tf.estimate(src, dst):
+    [PASS P+] tilt_x               sev=0        1.01s
+    [PASS P+] tilt_x               sev=5        0.98s
+    [PASS P+] tilt_x               sev=10       0.97s
+    [FAIL P+] tilt_x               sev=20       0.98s  (manifest parse failed: manifest magic mismatch: got ecb516ec)
+    [FAIL P-] tilt_x               sev=30       0.92s  (pose failed: weak corners (NCC < 0.4): ['SW', 'SE'])
+    [FAIL P-] tilt_x               sev=40       0.96s  (pose failed: weak corners (NCC < 0.4): ['SW', 'SE'])
+    [PASS P+] tilt_y               sev=0        0.98s
+    [PASS P+] tilt_y               sev=5        0.96s
+    [PASS P+] tilt_y               sev=10       1.01s
+    [FAIL P+] tilt_y               sev=20       0.97s  (manifest parse failed: manifest magic mismatch: got 9f0f0a1a)
+    [FAIL P-] tilt_y               sev=30       0.91s  (pose failed: weak corners (NCC < 0.4): ['SE'])
+    [FAIL P-] tilt_y               sev=40       0.92s  (pose failed: weak corners (NCC < 0.4): ['NE', 'SW', 'SE'])
+    [PASS P+] rolling_shutter      sev=0.0      1.00s
+    [FAIL P-] rolling_shutter      sev=0.1      0.91s  (pose failed: weak corners (NCC < 0.4): ['SE'])
+    [FAIL P-] rolling_shutter      sev=0.3      0.90s  (pose failed: weak corners (NCC < 0.4): ['SE'])
+    [FAIL P-] rolling_shutter      sev=0.5      0.89s  (pose failed: weak corners (NCC < 0.4): ['SW', 'SE'])
+    [FAIL P-] rolling_shutter      sev=1.0      0.90s  (pose failed: weak corners (NCC < 0.4): ['NW', 'SW', 'SE'])
+    [FAIL P-] rolling_shutter      sev=1.5      0.88s  (pose failed: weak corners (NCC < 0.4): ['NW', 'NE', 'SW', 'SE'])
+
+  PHOTOMETRIC SWEEP
+    [PASS P+] gaussian_intensity   sev=0.001    1.00s
+    [PASS P+] gaussian_intensity   sev=0.005    1.01s
+    [PASS P+] gaussian_intensity   sev=0.01     1.01s
+    [PASS P+] gaussian_intensity   sev=0.02     1.01s
+    [PASS P+] gaussian_intensity   sev=0.05     1.02s
+    [PASS P+] gaussian_intensity   sev=0.1      1.01s
+    [PASS P+] jpeg_roundtrip       sev=95       0.96s
+    [PASS P+] jpeg_roundtrip       sev=90       0.97s
+    [PASS P+] jpeg_roundtrip       sev=75       0.97s
+    [PASS P+] jpeg_roundtrip       sev=50       0.97s
+    [PASS P+] jpeg_roundtrip       sev=30       0.98s
+    [PASS P+] jpeg_roundtrip       sev=15       1.00s
+    [PASS P+] focus_blur           sev=0.3      1.02s
+    [PASS P+] focus_blur           sev=0.6      0.99s
+    [PASS P+] focus_blur           sev=1.0      0.97s
+    [PASS P+] focus_blur           sev=1.5      0.97s
+    [FAIL P+] focus_blur           sev=2.0      0.96s  (manifest parse failed: manifest magic mismatch: got 50485889)
+    [PASS P+] gamma_correction     sev=0.7      1.01s
+    [PASS P+] gamma_correction     sev=0.85     0.97s
+    [PASS P+] gamma_correction     sev=1.0      0.96s
+    [PASS P+] gamma_correction     sev=1.18     0.98s
+    [PASS P+] gamma_correction     sev=1.4      1.00s
+    [PASS P+] brightness_shift     sev=-0.1     1.02s
+    [PASS P+] brightness_shift     sev=-0.05    1.02s
+    [PASS P+] brightness_shift     sev=-0.02    0.97s
+    [PASS P+] brightness_shift     sev=0.02     0.97s
+    [PASS P+] brightness_shift     sev=0.05     0.99s
+    [PASS P+] brightness_shift     sev=0.1      1.00s
+    [PASS P+] contrast_scale       sev=0.6      1.00s
+    [PASS P+] contrast_scale       sev=0.7      1.00s
+    [PASS P+] contrast_scale       sev=0.85     0.99s
+    [PASS P+] contrast_scale       sev=1.0      1.00s
+    [PASS P+] contrast_scale       sev=1.18     1.02s
+    [PASS P+] contrast_scale       sev=1.4      1.00s
+    [PASS P+] salt_and_pepper      sev=0.001    1.02s
+    [PASS P+] salt_and_pepper      sev=0.005    1.01s
+    [PASS P+] salt_and_pepper      sev=0.01     1.01s
+    [PASS P+] salt_and_pepper      sev=0.02     1.01s
+    [PASS P+] salt_and_pepper      sev=0.05     1.03s
+
+  total sweep wall time: 96.9s
+
+======================================================================
+  PER-NOISE-TYPE SUMMARY
+======================================================================
+  [geometric  ] translation_x          pass=[0, 10, 30, 60] fail=[100]
+  [geometric  ] translation_y          pass=[0, 10, 30, 60] fail=[100]
+  [geometric  ] subpixel               pass=[0.0, 0.25, 0.5, 0.75] fail=[]
+  [geometric  ] rotation               pass=[0, 5] fail=[15, 30, 45, 90, 135, 180, 270]
+  [geometric  ] scale                  pass=[0.7, 0.85, 1.0] fail=[0.5, 1.18, 1.4, 1.7, 2.0]
+  [geometric  ] shear                  pass=[0, 2, 5] fail=[10, 15]
+  [geometric  ] tilt_x                 pass=[0, 5, 10] fail=[20, 30, 40]
+  [geometric  ] tilt_y                 pass=[0, 5, 10] fail=[20, 30, 40]
+  [geometric  ] rolling_shutter        pass=[0.0] fail=[0.1, 0.3, 0.5, 1.0, 1.5]
+  [photometric] gaussian_intensity     pass=[0.001, 0.005, 0.01, 0.02, 0.05, 0.1] fail=[]
+  [photometric] jpeg_roundtrip         pass=[15, 30, 50, 75, 90, 95] fail=[]
+  [photometric] focus_blur             pass=[0.3, 0.6, 1.0, 1.5] fail=[2.0]
+  [photometric] gamma_correction       pass=[0.7, 0.85, 1.0, 1.18, 1.4] fail=[]
+  [photometric] brightness_shift       pass=[-0.1, -0.05, -0.02, 0.02, 0.05, 0.1] fail=[]
+  [photometric] contrast_scale         pass=[0.6, 0.7, 0.85, 1.0, 1.18, 1.4] fail=[]
+  [photometric] salt_and_pepper        pass=[0.001, 0.005, 0.01, 0.02, 0.05] fail=[]
+======================================================================
+
+  full profile -> results/acceptance_profile_20260504T142937Z.json

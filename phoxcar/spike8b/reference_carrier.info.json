@@ -1,0 +1,37 @@
+{
+  "spike_version": "P3A.0",
+  "filename": "spike8b_reference.txt",
+  "payload_size": 305,
+  "compressed_size": 214,
+  "framed_size": 283,
+  "rs_encoded_size": 514,
+  "n_payload_germs": 514,
+  "n_used_germs": 526,
+  "canvas": [
+    1280,
+    1280
+  ],
+  "params": {
+    "sigma": 4.0,
+    "half_size": 12,
+    "pixel_bit_depth": 8,
+    "amp": 0.3,
+    "baseline": 0.0,
+    "background": 0.5,
+    "n_codewords": 256,
+    "codebook_seed": 20260504
+  },
+  "anchor_codeword_indices": [
+    8,
+    143,
+    216,
+    156
+  ],
+  "fiducial": "aruco_DICT_4X4_50",
+  "png_path": "/home/user/Crypscan/phoxcar/spike8b/reference_carrier.png",
+  "png_bytes": 133387,
+  "reference_payload_text": "SPIKE-8B real-camera validation reference carrier.\nP3.A substrate (ArUco DICT_4X4_50 corners + spike-7 codebook).\nAuthored 2026-05-04 on branch claude/phase-0-v5-handoff-Sx50S.\nIf you're reading this from a decoded phone capture, the round-trip survived display + camera + JPEG. That's the win condition.\n",
+  "reference_payload_size": 305,
+  "reference_payload_sha256": "12265155a5ade7abfa1a9f30702fbd47ffb7dcedd1cc009f2d73195f3423a7a0",
+  "reference_carrier_purpose": "spike-8B real-camera validation. Display this PNG full-screen on each test screen and capture with each test phone per CAPTURE_PROTOCOL.md."
+}
