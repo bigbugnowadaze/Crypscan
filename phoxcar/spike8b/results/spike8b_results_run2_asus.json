@@ -1,0 +1,264 @@
+{
+  "timestamp": "20260504T174303Z",
+  "spike": "spike-8B",
+  "substrate_under_test": "P3.A (ArUco fiducials + spike-7 codebook)",
+  "reference_payload_sha256": "12265155a5ade7abfa1a9f30702fbd47ffb7dcedd1cc009f2d73195f3423a7a0",
+  "n_captures": 9,
+  "n_pass": 0,
+  "n_fail": 9,
+  "pass_rate": 0.0,
+  "results": [
+    {
+      "filename": "s21fe_asus_comfy_headon_bright_01.jpg",
+      "meta": {
+        "phone": "s21fe",
+        "screen": "asus",
+        "distance": "comfy",
+        "angle": "headon",
+        "lighting": "bright",
+        "seq": 1,
+        "parsed": true
+      },
+      "load_error": null,
+      "image_size": [
+        3000,
+        4000
+      ],
+      "pose_ok_full": false,
+      "sha256_ok_full": false,
+      "decode_error_full": "ArUco pose failed: detected 0 markers, need 4",
+      "pose_ok_cropped": null,
+      "sha256_ok_cropped": null,
+      "decode_error_cropped": null,
+      "transform": null,
+      "rs_corrected_frames": 0,
+      "rs_failed_frames": [],
+      "observed_filename": null,
+      "wall_time_s": 4.605682877000021
+    },
+    {
+      "filename": "s21fe_asus_comfy_headon_bright_02.jpg",
+      "meta": {
+        "phone": "s21fe",
+        "screen": "asus",
+        "distance": "comfy",
+        "angle": "headon",
+        "lighting": "bright",
+        "seq": 2,
+        "parsed": true
+      },
+      "load_error": null,
+      "image_size": [
+        3000,
+        4000
+      ],
+      "pose_ok_full": false,
+      "sha256_ok_full": false,
+      "decode_error_full": "ArUco pose failed: detected 0 markers, need 4",
+      "pose_ok_cropped": null,
+      "sha256_ok_cropped": null,
+      "decode_error_cropped": null,
+      "transform": null,
+      "rs_corrected_frames": 0,
+      "rs_failed_frames": [],
+      "observed_filename": null,
+      "wall_time_s": 3.548892723999984
+    },
+    {
+      "filename": "s21fe_asus_comfy_headon_bright_03.jpg",
+      "meta": {
+        "phone": "s21fe",
+        "screen": "asus",
+        "distance": "comfy",
+        "angle": "headon",
+        "lighting": "bright",
+        "seq": 3,
+        "parsed": true
+      },
+      "load_error": null,
+      "image_size": [
+        3000,
+        4000
+      ],
+      "pose_ok_full": false,
+      "sha256_ok_full": false,
+      "decode_error_full": "ArUco pose failed: detected 0 markers, need 4",
+      "pose_ok_cropped": null,
+      "sha256_ok_cropped": null,
+      "decode_error_cropped": null,
+      "transform": null,
+      "rs_corrected_frames": 0,
+      "rs_failed_frames": [],
+      "observed_filename": null,
+      "wall_time_s": 3.548247129999993
+    },
+    {
+      "filename": "s21fe_asus_comfy_headon_bright_04.jpg",
+      "meta": {
+        "phone": "s21fe",
+        "screen": "asus",
+        "distance": "comfy",
+        "angle": "headon",
+        "lighting": "bright",
+        "seq": 4,
+        "parsed": true
+      },
+      "load_error": null,
+      "image_size": [
+        3000,
+        4000
+      ],
+      "pose_ok_full": false,
+      "sha256_ok_full": false,
+      "decode_error_full": "ArUco pose failed: detected 0 markers, need 4",
+      "pose_ok_cropped": null,
+      "sha256_ok_cropped": null,
+      "decode_error_cropped": null,
+      "transform": null,
+      "rs_corrected_frames": 0,
+      "rs_failed_frames": [],
+      "observed_filename": null,
+      "wall_time_s": 3.316048359999968
+    },
+    {
+      "filename": "s21fe_asus_comfy_headon_bright_05.jpg",
+      "meta": {
+        "phone": "s21fe",
+        "screen": "asus",
+        "distance": "comfy",
+        "angle": "headon",
+        "lighting": "bright",
+        "seq": 5,
+        "parsed": true
+      },
+      "load_error": null,
+      "image_size": [
+        3000,
+        4000
+      ],
+      "pose_ok_full": false,
+      "sha256_ok_full": false,
+      "decode_error_full": "ArUco pose failed: detected 1 markers, need 4",
+      "pose_ok_cropped": null,
+      "sha256_ok_cropped": null,
+      "decode_error_cropped": null,
+      "transform": null,
+      "rs_corrected_frames": 0,
+      "rs_failed_frames": [],
+      "observed_filename": null,
+      "wall_time_s": 3.3847077380000314
+    },
+    {
+      "filename": "s21fe_asus_comfy_headon_bright_06.jpg",
+      "meta": {
+        "phone": "s21fe",
+        "screen": "asus",
+        "distance": "comfy",
+        "angle": "headon",
+        "lighting": "bright",
+        "seq": 6,
+        "parsed": true
+      },
+      "load_error": null,
+      "image_size": [
+        3000,
+        4000
+      ],
+      "pose_ok_full": false,
+      "sha256_ok_full": false,
+      "decode_error_full": "ArUco pose failed: detected 0 markers, need 4",
+      "pose_ok_cropped": null,
+      "sha256_ok_cropped": null,
+      "decode_error_cropped": null,
+      "transform": null,
+      "rs_corrected_frames": 0,
+      "rs_failed_frames": [],
+      "observed_filename": null,
+      "wall_time_s": 2.9408622280000145
+    },
+    {
+      "filename": "s21fe_asus_comfy_headon_bright_07.jpg",
+      "meta": {
+        "phone": "s21fe",
+        "screen": "asus",
+        "distance": "comfy",
+        "angle": "headon",
+        "lighting": "bright",
+        "seq": 7,
+        "parsed": true
+      },
+      "load_error": null,
+      "image_size": [
+        3000,
+        4000
+      ],
+      "pose_ok_full": false,
+      "sha256_ok_full": false,
+      "decode_error_full": "ArUco pose failed: detected 0 markers, need 4",
+      "pose_ok_cropped": null,
+      "sha256_ok_cropped": null,
+      "decode_error_cropped": null,
+      "transform": null,
+      "rs_corrected_frames": 0,
+      "rs_failed_frames": [],
+      "observed_filename": null,
+      "wall_time_s": 2.9380163760000073
+    },
+    {
+      "filename": "s21fe_asus_comfy_headon_bright_08.jpg",
+      "meta": {
+        "phone": "s21fe",
+        "screen": "asus",
+        "distance": "comfy",
+        "angle": "headon",
+        "lighting": "bright",
+        "seq": 8,
+        "parsed": true
+      },
+      "load_error": null,
+      "image_size": [
+        3000,
+        4000
+      ],
+      "pose_ok_full": false,
+      "sha256_ok_full": false,
+      "decode_error_full": "ArUco pose failed: detected 0 markers, need 4",
+      "pose_ok_cropped": null,
+      "sha256_ok_cropped": null,
+      "decode_error_cropped": null,
+      "transform": null,
+      "rs_corrected_frames": 0,
+      "rs_failed_frames": [],
+      "observed_filename": null,
+      "wall_time_s": 3.146417465000013
+    },
+    {
+      "filename": "s21fe_asus_comfy_headon_bright_09.jpg",
+      "meta": {
+        "phone": "s21fe",
+        "screen": "asus",
+        "distance": "comfy",
+        "angle": "headon",
+        "lighting": "bright",
+        "seq": 9,
+        "parsed": true
+      },
+      "load_error": null,
+      "image_size": [
+        3000,
+        4000
+      ],
+      "pose_ok_full": false,
+      "sha256_ok_full": false,
+      "decode_error_full": "ArUco pose failed: detected 0 markers, need 4",
+      "pose_ok_cropped": null,
+      "sha256_ok_cropped": null,
+      "decode_error_cropped": null,
+      "transform": null,
+      "rs_corrected_frames": 0,
+      "rs_failed_frames": [],
+      "observed_filename": null,
+      "wall_time_s": 3.170887805999996
+    }
+  ]
+}

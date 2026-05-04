@@ -1,16 +1,29 @@
 # Spike-8B real-camera validation report
 
-**Timestamp:** 20260504T16xxxxZ
+**Timestamp:** 20260504T16xxxxZ (run 1: phone-on-phone), 20260504T17xxxxZ (run 2: Asus laptop)
 **Substrate under test:** P3.A (ArUco fiducials + spike-7 codebook)
 **Reference payload SHA-256:** `12265155a5ade7abfa1a9f30702fbd47ffb7dcedd1cc009f2d73195f3423a7a0`
 
-## Captures
+## Executive summary
 
-8 captures, alternate-test setup:
-- **Source display:** a phone screen (NOT a monitor) showing `reference_carrier.png`
-- **Camera:** another phone (suspected S21 FE)
-- **Conditions:** "comfy" distance, ~head-on, carrier rotated 90° in frame
-  (camera-phone landscape vs source-phone portrait), bright/mixed lighting
+Two capture sessions, two different failure modes — neither yet confirms or
+disproves the production envelope. Both surface real-world issues we did not
+predict from synthetic tests.
+
+| Run | Display | Captures | Pass | Failure mode |
+|---|---|---|---|---|
+| 1 | phone screen (S21 FE-ish) | 8 | 0 | pose 6/8, inner decode 0/6 — **screen subpixel moiré** breaks codebook NN |
+| 2 | Asus laptop screen | 9 | 0 | pose 0/9 — **carrier display issue** (markers stretched/distorted/half-cropped) |
+
+**Run 2 does NOT yet test "carrier on a real monitor."** The Asus display itself
+appears to have rendered the carrier wrong (germ field fills only the top half
+of the carrier in the rectified-cropped view; markers are too small or non-square
+for ArUco). One more attempt with a known-correct display setup is needed before
+we can declare anything about the monitor pathway.
+
+---
+
+## Run 1: phone-on-phone (8 captures, 2026-05-04 ~16Z)
 
 ## Headline
 
@@ -130,3 +143,80 @@ Per `CAPTURE_PROTOCOL.md`:
   display-pathway-dependent. The recommended next experiment (MSI/Asus monitor
   display) is exactly the targeted next step that will tell us whether to
   block, mitigate, or document-as-deployment-requirement.
+
+---
+
+## Run 2: Asus laptop screen (9 captures, 2026-05-04 ~17Z)
+
+Bug attempted the recommended next step (display reference_carrier.png on the
+Asus laptop), but the captures surface a **different problem entirely**: the
+display itself didn't render the carrier correctly. Pose recovery fails on
+all 9 because the markers in the photographed frame are not recognizable as
+ArUco markers.
+
+| Layer | Result |
+|---|---|
+| ArUco pose | **0/9** — 8 captures: 0 markers detected; 1 capture: 1 marker (with wrong ID=28) |
+
+### What the captures show
+
+Side-by-side `debug_asus_vs_reference.png` (canonical reference vs cropped
+Asus capture):
+
+- **Reference (left):** 4 large ArUco markers at corners; germ field fills the
+  central 56% of the canvas; aspect 1:1 throughout.
+- **Asus capture (right):** 4 small markers at the corners of a square gray
+  region; germ field fills only the **top half** of that region (or only the
+  left half before un-rotating); bottom half shows screen surface with
+  smudges/glare and faint moiré.
+
+This means **the carrier was not displayed at full canonical resolution +
+aspect ratio on the laptop screen.** Possibilities:
+
+1. **Carrier displayed at non-1:1 aspect ratio.** If the image viewer rendered
+   the carrier with vertical compression (or horizontal stretch), the markers
+   become non-square rectangles and ArUco rejects them by design.
+2. **Carrier displayed with letterbox/crop, with the bottom 2 "markers" being
+   screen artifacts** (dust, dead pixels, edge of a window/panel) that aren't
+   real markers.
+3. **Window viewer showed only top half of the carrier** with the bottom-half
+   space occupied by viewer chrome / desktop background.
+
+In all cases, the issue is upstream of the substrate — neither pose nor inner
+decode gets to run because the displayed image isn't a faithful render of
+reference_carrier.png.
+
+### What this tells us
+
+**Run 2 is NOT a P3.A failure**, it's a display-setup failure. We have no
+data yet on whether P3.A works against a properly-displayed monitor carrier.
+
+### Recommended next attempt (run 3)
+
+Display the carrier on the Asus (or MSI) **explicitly at 1:1 native pixel
+resolution**, with the carrier filling most of the photo when captured. One of:
+
+- **In a browser:** open `reference_carrier.png` directly via `file://` URL.
+  The browser will display it at native resolution (1280×1280 actual pixels).
+  Zoom-to-fit or scroll-to-center if needed.
+- **In Windows Photos / Image Viewer:** open the file, set zoom to "Actual
+  size" or 100% (NOT "fit to window" if the window aspect is non-square).
+- **Full-screen slideshow mode:** in many viewers, F11 / right-click →
+  "View full screen" gives you a black surround and 1:1 actual-size display.
+
+**Critical sanity-check before capturing:** look at the displayed carrier on
+the screen. The 4 ArUco corner markers should appear as visibly-square
+high-contrast tiles. If they look stretched (rectangles) or tiny relative to
+the carrier interior, the display is wrong.
+
+Then capture per the existing protocol (close enough that the carrier fills
+60-80% of the photo frame; head-on; bright lighting). 9 captures is fine; even
+1 successful decode would be a strong signal.
+
+## Files in run 2
+
+- `results/debug_asus_cropped_01.png` — auto-cropped Asus capture
+- `results/debug_asus_vs_reference.png` — side-by-side canonical vs Asus cropped
+- `results/debug_clahe_05.png` — CLAHE-contrast-enhanced version (also failed
+  ArUco; not a contrast issue)
+
