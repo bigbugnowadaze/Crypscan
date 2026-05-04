@@ -1,9 +1,15 @@
-# Spec — `phoxoid_field` dtype (v0.1 draft)
+# Spec — `phoxoid_field` dtype (v0.1.0)
 
-**Status:** integration spec, partnership review draft
+**Status:** **APPROVED v0.1.0** — partnership review 2026-05-04
 **Authored:** 2026-05-04
 **Closes:** audit gap **G1** (the keystone gap from `AUDIT_B1_cross_tree_integration.md`)
-**Scope:** the single canonical data type representing a *phoxoidal field* — a collection of catastrophe-germ sites — that CRYPSOID, Aurexis, and the phoxoidal carrier can all produce and consume. v0.1 is minimal core; extensions deferred.
+**Scope:** the single canonical data type representing a *phoxoidal field* — a collection of catastrophe-germ sites — that CRYPSOID, Aurexis, and the phoxoidal carrier can all produce and consume. v0.1.0 is minimal core; extensions deferred.
+
+**Resolved decisions on §8 open questions:**
+- Q1 — `basis` **locked** to `"pearcey5"` for v0.1.0. No alternatives admitted.
+- Q2 — Field-level confidence is **derived/computed on demand**, not stored.
+- Q3 — 3D ↔ 2D projection **deferred to v0.2**. v0.1.0 trees interoperate through Aurexis FieldBundle conversion.
+- Q4 — Dtype name **remains `phoxoid_field` pending B-3**. Will be renamed if/when naming settles.
 
 ---
 
