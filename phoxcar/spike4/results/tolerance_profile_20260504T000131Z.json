@@ -1,0 +1,408 @@
+{
+  "timestamp": "20260504T000131Z",
+  "spike_version": "4.0",
+  "substrate": "spike-3 sigmoid carrier @ 8-bit",
+  "payload_size": 10450,
+  "n_germs": 511,
+  "png_dimensions": [
+    692,
+    692
+  ],
+  "expected_sha256": "8bbd766c56a902c4686302b32631a08d39c06fed36c6cf7511cf974bc324128e",
+  "baseline_pass": true,
+  "conditions": [
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.001,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 5,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 6,
+      "extract_residual_max": 0.5932223988074059,
+      "extract_residual_mean": 0.21435732362697957,
+      "wall_time_s": 0.0535804850000261
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.005,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 41585136)",
+      "wall_time_s": 0.05659869100000492
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.01,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 41585136)",
+      "wall_time_s": 0.055540240999988555
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.02,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 3f575135)",
+      "wall_time_s": 0.05555933800002322
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.05,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 38535133)",
+      "wall_time_s": 0.06215823200000159
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.1,
+      "sha256_ok": false,
+      "decode_error": "ValueError: too short for AXP6 header (0 < 48)",
+      "wall_time_s": 0.05344809800001826
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 95,
+      "sha256_ok": false,
+      "decode_error": "error: brotli: decoder failed",
+      "wall_time_s": 0.06408958600002279
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 90,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 40575036)",
+      "wall_time_s": 0.05680807399997434
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 75,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 40595136)",
+      "wall_time_s": 0.05526137100000028
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 50,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 3f554c36)",
+      "wall_time_s": 0.055361904999983835
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 30,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 3d575036)",
+      "wall_time_s": 0.055628832000024886
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 15,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 375c442d)",
+      "wall_time_s": 0.055191374999992604
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 0.3,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 3,
+      "rs_frames_failed": 1,
+      "rs_bytes_corrected": 5,
+      "extract_residual_max": 0.48857279758635586,
+      "extract_residual_mean": 0.17951736446861755,
+      "wall_time_s": 0.049404386000020395
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 0.6,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 505a523a)",
+      "wall_time_s": 0.05741588499998329
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 1.0,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 615a533f)",
+      "wall_time_s": 0.05430060200001208
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 1.5,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 73565245)",
+      "wall_time_s": 0.05653522399998678
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 2.0,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 85514f4c)",
+      "wall_time_s": 0.055586884999996755
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 0.7,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 00ffe13f)",
+      "wall_time_s": 0.05508121799999799
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 0.85,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 08b8943a)",
+      "wall_time_s": 0.05444398800000272
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 0.4184032495463006,
+      "extract_residual_mean": 0.17441240299747157,
+      "wall_time_s": 0.04445060400001921
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 1.18,
+      "sha256_ok": false,
+      "decode_error": "ValueError: too short for AXP6 header (0 < 48)",
+      "wall_time_s": 0.0591946830000154
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 1.4,
+      "sha256_ok": false,
+      "decode_error": "ValueError: too short for AXP6 header (0 < 48)",
+      "wall_time_s": 0.054881900999987465
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": -0.1,
+      "sha256_ok": false,
+      "decode_error": "ValueError: too short for AXP6 header (0 < 48)",
+      "wall_time_s": 0.054377088999984835
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": -0.05,
+      "sha256_ok": false,
+      "decode_error": "ValueError: too short for AXP6 header (0 < 48)",
+      "wall_time_s": 0.0544241269999759
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": -0.02,
+      "sha256_ok": false,
+      "decode_error": "ValueError: too short for AXP6 header (0 < 48)",
+      "wall_time_s": 0.055709231000008685
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": 0.02,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 317c6938)",
+      "wall_time_s": 0.05832814800001529
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": 0.05,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 14b5913a)",
+      "wall_time_s": 0.05549303600000144
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": 0.1,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 00ffd13b)",
+      "wall_time_s": 0.0550312440000198
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 0.7,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 60686251)",
+      "wall_time_s": 0.054421280000013894
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 0.85,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 55625a45)",
+      "wall_time_s": 0.05489660399999252
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 0.4184032495463006,
+      "extract_residual_mean": 0.17441240299747157,
+      "wall_time_s": 0.044475137999995695
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 1.18,
+      "sha256_ok": false,
+      "decode_error": "ValueError: too short for AXP6 header (0 < 48)",
+      "wall_time_s": 0.05478835599998888
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 1.4,
+      "sha256_ok": false,
+      "decode_error": "ValueError: too short for AXP6 header (0 < 48)",
+      "wall_time_s": 0.05685506099999316
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.001,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 416b4842)",
+      "wall_time_s": 0.0589172819999817
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.005,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 41675143)",
+      "wall_time_s": 0.05392049799999654
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.01,
+      "sha256_ok": false,
+      "decode_error": "ValueError: too short for AXP6 header (0 < 48)",
+      "wall_time_s": 0.05413384199999882
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.02,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 3f5b672b)",
+      "wall_time_s": 0.05331716599999936
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.05,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 16484528)",
+      "wall_time_s": 0.05446953300000246
+    }
+  ],
+  "per_type_summary": [
+    {
+      "noise_type": "gaussian_intensity",
+      "severity_metric": "severity (higher is more severe)",
+      "in_bounds_extreme_pass": 0.001,
+      "out_of_bounds_extreme_fail": 0.005,
+      "all_passing_severities": [
+        0.001
+      ],
+      "all_failing_severities": [
+        0.005,
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ]
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity_metric": "JPEG quality (lower is more severe)",
+      "in_bounds_extreme_pass": null,
+      "out_of_bounds_extreme_fail": 95,
+      "all_passing_severities": [],
+      "all_failing_severities": [
+        15,
+        30,
+        50,
+        75,
+        90,
+        95
+      ]
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity_metric": "severity (higher is more severe)",
+      "in_bounds_extreme_pass": 0.3,
+      "out_of_bounds_extreme_fail": 0.6,
+      "all_passing_severities": [
+        0.3
+      ],
+      "all_failing_severities": [
+        0.6,
+        1.0,
+        1.5,
+        2.0
+      ]
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity_metric": "|severity - 1.0|",
+      "in_bounds_extreme_pass": 0.0,
+      "out_of_bounds_extreme_fail": 0.15000000000000002,
+      "all_passing_severities": [
+        1.0
+      ],
+      "all_failing_severities": [
+        0.7,
+        0.85,
+        1.18,
+        1.4
+      ]
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity_metric": "|delta|",
+      "in_bounds_extreme_pass": null,
+      "out_of_bounds_extreme_fail": 0.02,
+      "all_passing_severities": [],
+      "all_failing_severities": [
+        -0.1,
+        -0.05,
+        -0.02,
+        0.02,
+        0.05,
+        0.1
+      ]
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity_metric": "|severity - 1.0|",
+      "in_bounds_extreme_pass": 0.0,
+      "out_of_bounds_extreme_fail": 0.15000000000000002,
+      "all_passing_severities": [
+        1.0
+      ],
+      "all_failing_severities": [
+        0.7,
+        0.85,
+        1.18,
+        1.4
+      ]
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity_metric": "severity (higher is more severe)",
+      "in_bounds_extreme_pass": null,
+      "out_of_bounds_extreme_fail": 0.001,
+      "all_passing_severities": [],
+      "all_failing_severities": [
+        0.001,
+        0.005,
+        0.01,
+        0.02,
+        0.05
+      ]
+    }
+  ]
+}
