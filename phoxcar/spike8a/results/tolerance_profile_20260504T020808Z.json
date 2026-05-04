@@ -1,0 +1,1140 @@
+{
+  "timestamp": "20260504T020808Z",
+  "spike_version": "8A.0",
+  "substrate": "codebook + pilots + finders + manifest, no sidecar",
+  "payload_size": 1020,
+  "n_payload_germs": 514,
+  "canvas": [
+    1280,
+    1280
+  ],
+  "expected_sha256": "fe08c34c6130b12afdcc66ccadf0fb0893355d9dfe447d81ebb23f7fae44645e",
+  "baseline_pass": true,
+  "conditions": [
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 0,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5825984900000094
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 5,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5791096139998899
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 20,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5873924889999671
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 50,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.47006335199989735
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 100,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.46836980900002345
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 0,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5936431200000243
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 5,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.45688442899995607
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 15,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.46007667100002436
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 45,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.47145485600003667
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 90,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.619423013999949
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 180,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got f3f3f3f3",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5449999429999934
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 0.7,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.09372760528049928,
+        "b": 0.8333001208236688,
+        "gamma": 1.0335725192282652,
+        "fit_residual": 2.3020738665363147
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5857632059999105
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 0.85,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got f3f3f3f3",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.551270354999815
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5652962480000951
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 1.18,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.46442124100008186
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 1.4,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.45027052799991907
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "severity": 0,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5814040100001421
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "severity": 2,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.040851801803193706,
+        "b": 0.9107785521789211,
+        "gamma": 0.9851213144366288,
+        "fit_residual": 1.5332740378130958
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5874199610000232
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "severity": 5,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4621493949998694
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "severity": 10,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.47538344099984897
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 0,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5929264110000076
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 5,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "final decode failed: 'utf-8' codec can't decode byte 0xfb in position 12: invalid start byte",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5932844120000027
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 10,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4796242360000633
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 20,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.49011655600020276
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 30,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.46725763200015535
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 0,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5788173270000243
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 5,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "final decode failed: 'utf-8' codec can't decode byte 0xfb in position 12: invalid start byte",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5726952550000988
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 10,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4541122870000436
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 20,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4635548530000051
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 30,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4555865239999548
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.001,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019431666986094078,
+        "b": 0.9575284960365313,
+        "gamma": 0.9935239332604484,
+        "fit_residual": 0.81342801827584
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5668467600000895
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.005,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.021686491609820176,
+        "b": 0.9534171578562743,
+        "gamma": 0.9937200777966496,
+        "fit_residual": 0.882174501921696
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5866699630000767
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.01,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.027301732438065603,
+        "b": 0.9422322832534193,
+        "gamma": 0.9931485393654049,
+        "fit_residual": 1.1309983452046501
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5897589660000904
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.02,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "final decode failed: brotli: decoder failed",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5934919189999164
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.05,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got f3f3f3f3",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5761734559998786
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.1,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5316324609998446
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 95,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.017670312935981466,
+        "b": 0.9613251877666644,
+        "gamma": 0.9942122037395973,
+        "fit_residual": 0.7478766658686129
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5748810190000313
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 90,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.023014860472213978,
+        "b": 0.9536963949490304,
+        "gamma": 0.9986420871215542,
+        "fit_residual": 0.8462238395470938
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5770936220001204
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 75,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.027802387056319683,
+        "b": 0.94279545784185,
+        "gamma": 0.9956678118377263,
+        "fit_residual": 1.0923577521140373
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5795111580000594
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 50,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.021564405784117995,
+        "b": 0.9552848144928616,
+        "gamma": 0.9995849608886347,
+        "fit_residual": 1.0828060968169264
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5726201879999735
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 30,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "final decode failed: brotli: decoder failed",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5729229460000624
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 15,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.05916220354724177,
+        "b": 0.893375319861925,
+        "gamma": 1.0070909780961772,
+        "fit_residual": 1.9135137331013041
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5747424470000624
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 0.3,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.02046979954801691,
+        "b": 0.9569835047700017,
+        "gamma": 0.9959577470675659,
+        "fit_residual": 0.7970107314795726
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5869559459999891
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 0.6,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "final decode failed: 'utf-8' codec can't decode byte 0xfb in position 12: invalid start byte",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.580742753000095
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 1.0,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "final decode failed: 'utf-8' codec can't decode byte 0xfb in position 12: invalid start byte",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.6012165510001068
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 1.5,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest claims 51914 payload germs but grid only has 1509 slots after manifest+pilots",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5597296680000454
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 2.0,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest claims 51914 payload germs but grid only has 1509 slots after manifest+pilots",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5550618110000869
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 0.7,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got da540375",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4978240129998994
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 0.85,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got ff484e75",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.48961671600000045
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5708432779999839
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 1.18,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got 781f5890",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.508717433999891
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 1.4,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got 785d8a8a",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5243838339999911
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": -0.1,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got 785d0f90",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5228135300001213
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": -0.05,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got 781f5890",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5276346379998813
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": -0.02,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.0023042538309007085,
+        "b": 0.9560285965147812,
+        "gamma": 0.9991187375667445,
+        "fit_residual": 0.8038555919312728
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5937418749999779
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": 0.02,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.03880745421706196,
+        "b": 0.958056729704079,
+        "gamma": 0.993639056167737,
+        "fit_residual": 0.7966179048481337
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5969327949999297
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": 0.05,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest parse failed: manifest magic mismatch: got ff486b75",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.520311460999892
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": 0.1,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4479034559999491
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 0.7,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "manifest claims 51914 payload germs but grid only has 1509 slots after manifest+pilots",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.556854506000036
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 0.85,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.09874710567688107,
+        "b": 0.7994748118573972,
+        "gamma": 0.9930226756134288,
+        "fit_residual": 0.9139128443853972
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5947681439999997
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.019259233113654087,
+        "b": 0.9580994526202963,
+        "gamma": 0.9939003186891255,
+        "fit_residual": 0.7947048639609646
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5984817559999556
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 1.18,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": -0.0308673139575708,
+        "b": 1.0959146289343737,
+        "gamma": 1.0477347910461052,
+        "fit_residual": 1.0695332872420513
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5877166839998154
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 1.4,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4581970360000014
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.001,
+      "sha256_ok": true,
+      "finder_detection_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.026843052538378903,
+        "b": 0.937746156411303,
+        "gamma": 0.9833377164026216,
+        "fit_residual": 1.4165574387592057
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.5985447069999736
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.005,
+      "sha256_ok": false,
+      "finder_detection_ok": true,
+      "decode_error": "final decode failed: not an AXP6 inner header (magic: c8585036)",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.6858294769999702
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.01,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.46786700100005874
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.02,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4668415599999207
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.05,
+      "sha256_ok": false,
+      "finder_detection_ok": false,
+      "decode_error": "could not detect 4 finder corners",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.4654297800000222
+    }
+  ],
+  "per_type_summary": [
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "passing": [
+        0,
+        5,
+        20
+      ],
+      "failing": [
+        50,
+        100
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "passing": [
+        0,
+        90
+      ],
+      "failing": [
+        5,
+        15,
+        45,
+        180
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "passing": [
+        0.7,
+        1.0
+      ],
+      "failing": [
+        0.85,
+        1.18,
+        1.4
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "passing": [
+        0,
+        2
+      ],
+      "failing": [
+        5,
+        10
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "passing": [
+        0
+      ],
+      "failing": [
+        5,
+        10,
+        20,
+        30
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "passing": [
+        0
+      ],
+      "failing": [
+        5,
+        10,
+        20,
+        30
+      ]
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "passing": [
+        0.001,
+        0.005,
+        0.01
+      ],
+      "failing": [
+        0.02,
+        0.05,
+        0.1
+      ]
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "passing": [
+        15,
+        50,
+        75,
+        90,
+        95
+      ],
+      "failing": [
+        30
+      ]
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "passing": [
+        0.3
+      ],
+      "failing": [
+        0.6,
+        1.0,
+        1.5,
+        2.0
+      ]
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "passing": [
+        1.0
+      ],
+      "failing": [
+        0.7,
+        0.85,
+        1.18,
+        1.4
+      ]
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "passing": [
+        -0.02,
+        0.02
+      ],
+      "failing": [
+        -0.1,
+        -0.05,
+        0.05,
+        0.1
+      ]
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "passing": [
+        0.85,
+        1.0,
+        1.18
+      ],
+      "failing": [
+        0.7,
+        1.4
+      ]
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "passing": [
+        0.001
+      ],
+      "failing": [
+        0.005,
+        0.01,
+        0.02,
+        0.05
+      ]
+    }
+  ]
+}
