@@ -1,0 +1,11 @@
+# spike-9B captures live here, but raw photos are NOT committed to git.
+raw/
+processed/
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
+*.heic
+*.HEIC
