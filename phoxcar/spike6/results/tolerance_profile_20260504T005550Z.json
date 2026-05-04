@@ -1,0 +1,550 @@
+{
+  "timestamp": "20260504T005550Z",
+  "spike_version": "6.0",
+  "substrate": "sigmoid carrier + 256-glyph codebook + nearest-neighbor decode @ 8-bit",
+  "payload_size": 5230,
+  "n_germs": 1279,
+  "png_dimensions": [
+    1056,
+    1056
+  ],
+  "expected_sha256": "98d5af0aad3604250a47cdbc2046a58fe9c9b64e6c4d96893ee0f2e406f73965",
+  "baseline_pass": true,
+  "conditions": [
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.001,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 0.43020990248610835,
+      "extract_residual_mean": 0.20062293038594403,
+      "nn_margin_min": 4.299220968220324,
+      "nn_margin_mean": 4.615767690066649,
+      "wall_time_s": 0.24930019700002504
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.005,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 1.0579535702545666,
+      "extract_residual_mean": 0.7287523632502085,
+      "nn_margin_min": 4.202052657170226,
+      "nn_margin_mean": 4.576651181408009,
+      "wall_time_s": 0.2777836639999691
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.01,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 2.320025406341425,
+      "extract_residual_mean": 1.4043493348361358,
+      "nn_margin_min": 4.084147871642137,
+      "nn_margin_mean": 4.526306967049511,
+      "wall_time_s": 0.25168111400000726
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.02,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 4.811951132841269,
+      "extract_residual_mean": 2.8143646388859356,
+      "nn_margin_min": 3.832152555316112,
+      "nn_margin_mean": 4.415068746958597,
+      "wall_time_s": 0.2615185340000039
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.05,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 10.298435810207001,
+      "extract_residual_mean": 7.205385291709556,
+      "nn_margin_min": 2.4463491471133425,
+      "nn_margin_mean": 4.01089092828227,
+      "wall_time_s": 0.26409696500002156
+    },
+    {
+      "noise_type": "gaussian_intensity",
+      "severity": 0.1,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 22.86914666710938,
+      "extract_residual_mean": 15.274717497684408,
+      "nn_margin_min": 0.09237701634442796,
+      "nn_margin_mean": 3.084876986306409,
+      "wall_time_s": 0.25157477199996947
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 95,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 1.1396030189066129,
+      "extract_residual_mean": 0.3687949921920226,
+      "nn_margin_min": 4.2588046698647775,
+      "nn_margin_mean": 4.606786268785884,
+      "wall_time_s": 0.24921028199997863
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 90,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 1.6512190438360537,
+      "extract_residual_mean": 0.5493646369898921,
+      "nn_margin_min": 4.213432770403915,
+      "nn_margin_mean": 4.594155193679098,
+      "wall_time_s": 0.24341742199999317
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 75,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 3.111418597510578,
+      "extract_residual_mean": 0.9645758605610293,
+      "nn_margin_min": 4.12026426346675,
+      "nn_margin_mean": 4.544467742681907,
+      "wall_time_s": 0.25039429899999277
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 50,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 4.084295921703197,
+      "extract_residual_mean": 1.4805399410972158,
+      "nn_margin_min": 3.764947136497822,
+      "nn_margin_mean": 4.45656882581376,
+      "wall_time_s": 0.23356744599999502
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 30,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 5.796916867139472,
+      "extract_residual_mean": 2.0881396035172224,
+      "nn_margin_min": 3.502708846582866,
+      "nn_margin_mean": 4.329359245131121,
+      "wall_time_s": 0.23381856399998924
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "severity": 15,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 8.332721655140043,
+      "extract_residual_mean": 3.3434843702354793,
+      "nn_margin_min": 2.1574755039375235,
+      "nn_margin_mean": 3.9881812020361753,
+      "wall_time_s": 0.2535987570000202
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 0.3,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 0.3108833254220771,
+      "extract_residual_mean": 0.16303993512617532,
+      "nn_margin_min": 4.2690306526283885,
+      "nn_margin_mean": 4.613508585692076,
+      "wall_time_s": 0.23626307299997507
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 0.6,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 1.837096714361104,
+      "extract_residual_mean": 0.8445972916496134,
+      "nn_margin_min": 2.6575501979603766,
+      "nn_margin_mean": 4.021332991544695,
+      "wall_time_s": 0.24319612400000779
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 2.414769192824124,
+      "extract_residual_mean": 1.3062661033807248,
+      "nn_margin_min": 1.2113128702429192,
+      "nn_margin_mean": 3.3234087012644444,
+      "wall_time_s": 0.24721622399999887
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 1.5,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 5,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 37,
+      "extract_residual_max": 2.6904392738495195,
+      "extract_residual_mean": 1.6299635965901333,
+      "nn_margin_min": 0.001014088059785756,
+      "nn_margin_mean": 2.3636841667434094,
+      "wall_time_s": 0.2545125930000154
+    },
+    {
+      "noise_type": "focus_blur",
+      "severity": 2.0,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 415850a9)",
+      "wall_time_s": 0.24563448999998627
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 0.7,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 7203da5a)",
+      "wall_time_s": 0.23476194699998132
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 0.85,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 2e4eff5a)",
+      "wall_time_s": 0.23859155099995633
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 0.27984600116781133,
+      "extract_residual_mean": 0.1603683367405495,
+      "nn_margin_min": 4.302394068552269,
+      "nn_margin_mean": 4.618832724518871,
+      "wall_time_s": 0.2458172419999869
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 1.18,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: d85878a9)",
+      "wall_time_s": 0.23887880000000905
+    },
+    {
+      "noise_type": "gamma_correction",
+      "severity": 1.4,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 8a8a78a9)",
+      "wall_time_s": 0.2435986469999989
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": -0.1,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 8a0f78a9)",
+      "wall_time_s": 0.23184601699995255
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": -0.05,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: d85878a9)",
+      "wall_time_s": 0.23847054100002651
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": -0.02,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 3.616086537796069,
+      "extract_residual_mean": 1.5969773012030548,
+      "nn_margin_min": 0.3075736997364382,
+      "nn_margin_mean": 1.877574188402003,
+      "wall_time_s": 0.2368724259999908
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": 0.02,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 3.6377072659247816,
+      "extract_residual_mean": 1.5896469063363128,
+      "nn_margin_min": 0.31364519142916647,
+      "nn_margin_mean": 1.8277945991446285,
+      "wall_time_s": 0.2331014170000003
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": 0.05,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 2e6bff5a)",
+      "wall_time_s": 0.23375151499999447
+    },
+    {
+      "noise_type": "brightness_shift",
+      "severity": 0.1,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 7203ff5a)",
+      "wall_time_s": 0.24069621299997834
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 0.7,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 41585077)",
+      "wall_time_s": 0.232463929000005
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 0.85,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 0.9861885586100695,
+      "extract_residual_mean": 0.37051894963354487,
+      "nn_margin_min": 0.7001929226025467,
+      "nn_margin_mean": 2.457903167709774,
+      "wall_time_s": 0.22492647500001794
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 0.27984600116781133,
+      "extract_residual_mean": 0.1603683367405495,
+      "nn_margin_min": 4.302394068552269,
+      "nn_margin_mean": 4.618832724518871,
+      "wall_time_s": 0.23153429499996037
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 1.18,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 0,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 0,
+      "extract_residual_max": 9.409073029514925,
+      "extract_residual_mean": 2.8991880653695214,
+      "nn_margin_min": 0.5960278289642797,
+      "nn_margin_mean": 2.773109954775584,
+      "wall_time_s": 0.23035896699997238
+    },
+    {
+      "noise_type": "contrast_scale",
+      "severity": 1.4,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: c8585036)",
+      "wall_time_s": 0.23311291200002415
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.001,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 2,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 2,
+      "extract_residual_max": 38.35343102044283,
+      "extract_residual_mean": 5.083665556491628,
+      "nn_margin_min": 0.02119825319660107,
+      "nn_margin_mean": 4.1180363480654085,
+      "wall_time_s": 0.2312852219999968
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.005,
+      "sha256_ok": true,
+      "decode_error": null,
+      "rs_frames_corrected": 5,
+      "rs_frames_failed": 0,
+      "rs_bytes_corrected": 25,
+      "extract_residual_max": 57.74089597110619,
+      "extract_residual_mean": 18.568282114498068,
+      "nn_margin_min": 0.0009502993404546523,
+      "nn_margin_mean": 2.9097973699011903,
+      "wall_time_s": 0.23398004400002037
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.01,
+      "sha256_ok": false,
+      "decode_error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x94 in position 8: invalid start byte",
+      "wall_time_s": 0.23496690900003614
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.02,
+      "sha256_ok": false,
+      "decode_error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x86 in position 1: invalid start byte",
+      "wall_time_s": 0.23711609999998018
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "severity": 0.05,
+      "sha256_ok": false,
+      "decode_error": "ValueError: not an AXP6 inner header (magic: 416350a9)",
+      "wall_time_s": 0.23480440299999827
+    }
+  ],
+  "per_type_summary": [
+    {
+      "noise_type": "gaussian_intensity",
+      "in_bounds_extreme_pass": 0.1,
+      "out_of_bounds_extreme_fail": null,
+      "all_passing_severities": [
+        0.001,
+        0.005,
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ],
+      "all_failing_severities": []
+    },
+    {
+      "noise_type": "jpeg_roundtrip",
+      "in_bounds_extreme_pass": 15,
+      "out_of_bounds_extreme_fail": null,
+      "all_passing_severities": [
+        15,
+        30,
+        50,
+        75,
+        90,
+        95
+      ],
+      "all_failing_severities": []
+    },
+    {
+      "noise_type": "focus_blur",
+      "in_bounds_extreme_pass": 1.5,
+      "out_of_bounds_extreme_fail": 2.0,
+      "all_passing_severities": [
+        0.3,
+        0.6,
+        1.0,
+        1.5
+      ],
+      "all_failing_severities": [
+        2.0
+      ]
+    },
+    {
+      "noise_type": "gamma_correction",
+      "in_bounds_extreme_pass": 0.0,
+      "out_of_bounds_extreme_fail": 0.15000000000000002,
+      "all_passing_severities": [
+        1.0
+      ],
+      "all_failing_severities": [
+        0.7,
+        0.85,
+        1.18,
+        1.4
+      ]
+    },
+    {
+      "noise_type": "brightness_shift",
+      "in_bounds_extreme_pass": 0.02,
+      "out_of_bounds_extreme_fail": 0.05,
+      "all_passing_severities": [
+        -0.02,
+        0.02
+      ],
+      "all_failing_severities": [
+        -0.1,
+        -0.05,
+        0.05,
+        0.1
+      ]
+    },
+    {
+      "noise_type": "contrast_scale",
+      "in_bounds_extreme_pass": 0.17999999999999994,
+      "out_of_bounds_extreme_fail": 0.30000000000000004,
+      "all_passing_severities": [
+        0.85,
+        1.0,
+        1.18
+      ],
+      "all_failing_severities": [
+        0.7,
+        1.4
+      ]
+    },
+    {
+      "noise_type": "salt_and_pepper",
+      "in_bounds_extreme_pass": 0.005,
+      "out_of_bounds_extreme_fail": 0.01,
+      "all_passing_severities": [
+        0.001,
+        0.005
+      ],
+      "all_failing_severities": [
+        0.01,
+        0.02,
+        0.05
+      ]
+    }
+  ]
+}
