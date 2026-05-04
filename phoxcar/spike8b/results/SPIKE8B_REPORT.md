@@ -1,16 +1,29 @@
 # Spike-8B real-camera validation report
 
-**Timestamp:** 20260504T16xxxxZ
+**Timestamp:** 20260504T16xxxxZ (run 1: phone-on-phone), 20260504T17xxxxZ (run 2: Asus laptop)
 **Substrate under test:** P3.A (ArUco fiducials + spike-7 codebook)
 **Reference payload SHA-256:** `12265155a5ade7abfa1a9f30702fbd47ffb7dcedd1cc009f2d73195f3423a7a0`
 
-## Captures
+## Executive summary
 
-8 captures, alternate-test setup:
-- **Source display:** a phone screen (NOT a monitor) showing `reference_carrier.png`
-- **Camera:** another phone (suspected S21 FE)
-- **Conditions:** "comfy" distance, ~head-on, carrier rotated 90° in frame
-  (camera-phone landscape vs source-phone portrait), bright/mixed lighting
+Two capture sessions, two different failure modes — neither yet confirms or
+disproves the production envelope. Both surface real-world issues we did not
+predict from synthetic tests.
+
+| Run | Display | Captures | Pass | Failure mode |
+|---|---|---|---|---|
+| 1 | phone screen (S21 FE-ish) | 8 | 0 | pose 6/8, inner decode 0/6 — **screen subpixel moiré** breaks codebook NN |
+| 2 | Asus laptop screen | 9 | 0 | pose 0/9 — **carrier display issue** (markers stretched/distorted/half-cropped) |
+
+**Run 2 does NOT yet test "carrier on a real monitor."** The Asus display itself
+appears to have rendered the carrier wrong (germ field fills only the top half
+of the carrier in the rectified-cropped view; markers are too small or non-square
+for ArUco). One more attempt with a known-correct display setup is needed before
+we can declare anything about the monitor pathway.
+
+---
+
+## Run 1: phone-on-phone (8 captures, 2026-05-04 ~16Z)
 
 ## Headline
 
@@ -130,3 +143,152 @@ Per `CAPTURE_PROTOCOL.md`:
   display-pathway-dependent. The recommended next experiment (MSI/Asus monitor
   display) is exactly the targeted next step that will tell us whether to
   block, mitigate, or document-as-deployment-requirement.
+
+---
+
+## Run 2: Asus laptop screen (9 captures, 2026-05-04 ~17Z)
+
+Bug attempted the recommended next step (display reference_carrier.png on the
+Asus laptop), but the captures surface a **different problem entirely**: the
+display itself didn't render the carrier correctly. Pose recovery fails on
+all 9 because the markers in the photographed frame are not recognizable as
+ArUco markers.
+
+| Layer | Result |
+|---|---|
+| ArUco pose | **0/9** — 8 captures: 0 markers detected; 1 capture: 1 marker (with wrong ID=28) |
+
+### What the captures show
+
+Side-by-side `debug_asus_vs_reference.png` (canonical reference vs cropped
+Asus capture):
+
+- **Reference (left):** 4 large ArUco markers at corners; germ field fills the
+  central 56% of the canvas; aspect 1:1 throughout.
+- **Asus capture (right):** 4 small markers at the corners of a square gray
+  region; germ field fills only the **top half** of that region (or only the
+  left half before un-rotating); bottom half shows screen surface with
+  smudges/glare and faint moiré.
+
+This means **the carrier was not displayed at full canonical resolution +
+aspect ratio on the laptop screen.** Possibilities:
+
+1. **Carrier displayed at non-1:1 aspect ratio.** If the image viewer rendered
+   the carrier with vertical compression (or horizontal stretch), the markers
+   become non-square rectangles and ArUco rejects them by design.
+2. **Carrier displayed with letterbox/crop, with the bottom 2 "markers" being
+   screen artifacts** (dust, dead pixels, edge of a window/panel) that aren't
+   real markers.
+3. **Window viewer showed only top half of the carrier** with the bottom-half
+   space occupied by viewer chrome / desktop background.
+
+In all cases, the issue is upstream of the substrate — neither pose nor inner
+decode gets to run because the displayed image isn't a faithful render of
+reference_carrier.png.
+
+### What this tells us
+
+**Run 2 is NOT a P3.A failure**, it's a display-setup failure. We have no
+data yet on whether P3.A works against a properly-displayed monitor carrier.
+
+### Recommended next attempt (run 3)
+
+Display the carrier on the Asus (or MSI) **explicitly at 1:1 native pixel
+resolution**, with the carrier filling most of the photo when captured. One of:
+
+- **In a browser:** open `reference_carrier.png` directly via `file://` URL.
+  The browser will display it at native resolution (1280×1280 actual pixels).
+  Zoom-to-fit or scroll-to-center if needed.
+- **In Windows Photos / Image Viewer:** open the file, set zoom to "Actual
+  size" or 100% (NOT "fit to window" if the window aspect is non-square).
+- **Full-screen slideshow mode:** in many viewers, F11 / right-click →
+  "View full screen" gives you a black surround and 1:1 actual-size display.
+
+**Critical sanity-check before capturing:** look at the displayed carrier on
+the screen. The 4 ArUco corner markers should appear as visibly-square
+high-contrast tiles. If they look stretched (rectangles) or tiny relative to
+the carrier interior, the display is wrong.
+
+Then capture per the existing protocol (close enough that the carrier fills
+60-80% of the photo frame; head-on; bright lighting). 9 captures is fine; even
+1 successful decode would be a strong signal.
+
+## Files in run 2
+
+- `results/debug_asus_cropped_01.png` — auto-cropped Asus capture
+- `results/debug_asus_vs_reference.png` — side-by-side canonical vs Asus cropped
+- `results/debug_clahe_05.png` — CLAHE-contrast-enhanced version (also failed
+  ArUco; not a contrast issue)
+
+---
+
+## Run 4: Asus laptop, properly-displayed (3 captures, 2026-05-04 ~19Z)
+
+After Bug verified the file integrity and re-displayed `reference_carrier.png`
+in fullscreen Chrome (F11) at native 1:1 resolution, three more captures from
+the S21 FE.
+
+| Layer | Result |
+|---|---|
+| ArUco pose | **3/3 succeeded** — markers correctly detected, all canonical IDs found |
+| Pilot intensity-transform fit | succeeded for all 3 |
+| Manifest-magic decode | **0/3 matched `PHX1`** — same failure mode as run 1 (codebook NN returns wrong bytes) |
+
+### Magic byte analysis
+
+```
+Expected:  50485831  (PHX1 = P, H, X, 1)
+Cap 01:    911658b6  byte 2 (X) ✓; rest wrong
+Cap 02:    1b160fb6  none correct
+Cap 03:    1b1658b6  byte 2 (X) ✓; rest wrong
+```
+
+Different per-capture errors, same structural failure: per-germ codebook NN is
+unreliable on real captures.
+
+### What changed vs run 1 (phone-on-phone)
+
+- **Pose: 100% (was 75%).** Real monitor's larger marker pixels and lower
+  subpixel pitch make ArUco detection trivially robust.
+- **Inner decode: still 0%.** Even with cleaner display + camera capture,
+  the continuous-coefficient catastrophe-germ codebook NN cannot classify
+  256 codewords from real-world captures.
+
+### What this confirms
+
+This is **direct empirical confirmation of ADDENDUM_04's prior-art prediction.**
+The screen-camera channel destroys subtle continuous-grayscale modulation
+regardless of which screen is used. Better displays improve pose, but the
+inner decode failure is at the substrate level, not the capture-pathway level.
+
+`debug_manifest_zoom_run4_01.png` shows the canonical germ field side-by-side
+with the rectified capture: visibly better than phone-on-phone (much less
+high-frequency moiré), but the per-germ feature-to-noise ratio is still
+insufficient for 256-way classification at amp=0.30.
+
+### Files in run 4
+
+- `results/debug_rectified_run4_01.png` — rectified frame for capture 1
+- `results/debug_manifest_zoom_run4_01.png` — side-by-side canonical vs rectified
+- `results/spike8b_results_run4_asus_correct_display.json` — per-capture results
+
+## Conclusion across all 4 runs
+
+| Run | Display | Pose | Inner decode | Diagnosis |
+|---|---|---|---|---|
+| 1 | phone screen | 6/8 | 0/6 | screen-camera moiré |
+| 2 | Asus, broken file | 0/9 | n/a | display setup |
+| 3 | Asus, broken file | 0/3 | n/a | display setup |
+| 4 | Asus, fixed file + F11 | 3/3 | 0/3 | substrate-level channel mismatch |
+
+**P3.A's pose layer (ArUco) works in real-world capture.**
+**P3.A's inner substrate (continuous catastrophe-germ codebook) does not.**
+The failure is exactly the one ADDENDUM_04 predicted from prior art: subtle
+continuous-grayscale modulation at amp=0.30 is the regime the screen-camera
+channel destroys.
+
+The path forward is not more captures. It's **spike-9A** (per ADDENDUM_04 §5):
+synthetic moiré-distortion harness as a closed-loop test bed, then evaluate
+substrate variants (discrete classifier, increased amp, mid-band DCT, bandpass
+decode) against it before committing to any of them.
+
