@@ -41,30 +41,36 @@ Three deliverables:
   python3 report.py               ────────────────►  results/SPIKE8B_REPORT.md
 ```
 
-## Step-by-step (for the partnership)
+## Step-by-step
 
-1. **Read** `CAPTURE_PROTOCOL.md` (the operational doc).
-2. **Display** `reference_carrier.png` full-screen on each test screen
-   (MSI G27C4X and Asus laptop), set max brightness, no filters.
-3. **Capture** with each phone (S21 FE / Z Flip 4 / S23 Ultra) per the
-   capture matrix — 9 condition variants × phones × screens.
-4. **Drop** all captures into `captures/raw/` with names like
+### Recommended: solo quick pass (~30-45 min, one phone)
+
+1. **Read** the "Solo quick pass" section of `CAPTURE_PROTOCOL.md`.
+2. **Display** `reference_carrier.png` full-screen on any decent screen,
+   max brightness, no filters.
+3. **Take 9 captures** with one phone (e.g. S21 FE) per the solo matrix.
+4. **Drop** captures into `captures/raw/` with names like
    `s21fe_msi_comfy_headon_bright_01.jpg`. (`captures/raw/` is gitignored.)
-5. **Run** `python3 analyze.py` from this directory. Decodes each capture
-   and writes `results/spike8b_results.json`.
-6. **Run** `python3 report.py`. Produces `results/SPIKE8B_REPORT.md`.
-7. **Commit** the report (and the JSON) to the branch. Don't commit the raw photos.
-8. **Tell Claude** when the report is in; we use it to scope P3.C.
+5. **Run** `python3 analyze.py && python3 report.py` from this directory.
+6. **Commit** `results/SPIKE8B_REPORT.md` and `results/spike8b_results.json`.
+7. **Tell Claude.** Report decides whether the full matrix is needed.
+
+### Full matrix (only if solo pass surfaces something)
+
+Same flow, but multiple phones × multiple screens. ~2 hours. Don't pre-commit;
+let the solo data decide.
 
 ## What success looks like
 
-- **All captures decode** (pass rate near 100%) → P3.A's real-world envelope is
-  fine. V1 ships on P3.A as-is. P3.C becomes a research luxury, not a blocker.
-- **Most captures decode** (pass rate ~80%) with concentrated failure modes → the
-  failure axes tell us what specific P3.C iteration to scope first.
-- **Few captures decode** (pass rate <50%) → P3.A has a real-world brittleness
-  we didn't predict from synthetic tests. This would be the most important
-  finding of Phase 1, and it would justify blocking V1 to investigate.
+After the **solo pass** (9 captures, one phone, one screen):
+- **9/9 PASS** → real-world envelope is fine. P3.C is research luxury, not blocker.
+  The full matrix is probably unnecessary; V1 ships on P3.A as-is.
+- **7-8/9 PASS** with one concentrated failure → targeted follow-up captures
+  beat a full matrix. One more solo session may be enough.
+- **4-6/9 PASS** → real-world is meaningfully harder than synthetic. Worth a
+  full multi-phone × multi-screen session to characterize.
+- **<4/9 PASS** → P3.A has a real-world brittleness we didn't predict.
+  Investigate before any further captures.
 
 ## Files
 

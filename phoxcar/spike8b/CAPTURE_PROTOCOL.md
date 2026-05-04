@@ -1,9 +1,7 @@
 # Spike-8B capture protocol
 
-**For:** Bug + Vince. ~2 hours, can be split across sessions.
 **Goal:** characterize the real-world envelope of P3.A (ArUco fiducials + spike-7 substrate)
 across phone × screen × distance × angle × lighting variations.
-**Output:** ~50-80 captures that the harness will decode and report on.
 
 The whole point: synthetic warps in P3.A and P3.B told us what the algorithm
 *should* survive. This protocol tells us what the algorithm *actually* survives
@@ -12,17 +10,81 @@ informative datapoint of the entire Phase 1.
 
 ---
 
-## Equipment
+## ☆ Solo quick pass (start here)
 
-**Phones (any subset is fine — more is better):**
-- Samsung Galaxy S21 FE
-- Samsung Galaxy Z Flip 4
-- Samsung Galaxy S23 Ultra
+**~9 captures, one phone, one screen, ~30-45 minutes.** Designed so a single
+person can de-risk the whole experiment before committing to a full session.
 
-**Screens:**
-- MSI G27C4X (curved gaming monitor)
-- Asus laptop screen (glossy or matte, note which)
+If these 9 captures pass: the substrate handles real-world capture conditions
+well enough that the full multi-phone × multi-screen matrix is probably
+unnecessary. If they fail in concentrated ways: the failure pattern tells us
+what to look for in a follow-up session (and saves Vince a wasted afternoon).
 
+### Solo equipment
+
+- **One phone** (Bug's S21 FE is the suggested starting choice).
+- **One screen** (whatever's available — MSI G27C4X if convenient,
+  laptop or any decent monitor otherwise).
+- The reference carrier: `phoxcar/spike8b/reference_carrier.png`.
+
+### Solo capture matrix (9 shots)
+
+For the **single phone × single screen** combination, take these:
+
+| # | Distance | Angle | Lighting | Filename suffix |
+|---|---|---|---|---|
+| 1 | comfortable (~30-50 cm) | head-on | bright (room lights on) | `comfy_headon_bright_01` |
+| 2 | comfortable | head-on | dim (room lights off) | `comfy_headon_dim_01` |
+| 3 | comfortable | head-on | mixed (window backlight) | `comfy_headon_mixed_01` |
+| 4 | close (<20 cm — fills most of frame) | head-on | bright | `close_headon_bright_01` |
+| 5 | far (carrier ~25% of frame) | head-on | bright | `far_headon_bright_01` |
+| 6 | comfortable | tilted ~15° (rotate phone around vertical axis) | bright | `comfy_tilt15_bright_01` |
+| 7 | comfortable | tilted ~30° | bright | `comfy_tilt30_bright_01` |
+| 8 | comfortable | rotated 90° (phone in landscape vs screen in portrait) | bright | `comfy_rot90_bright_01` |
+| 9 | comfortable | head-on | bright (HANDHELD — slight motion ok) | `comfy_handheld_bright_01` |
+
+Filename format: `{phone}_{screen}_{suffix}.jpg` — e.g.
+`s21fe_msi_comfy_headon_bright_01.jpg`. If you forget the convention,
+the harness falls back to a generic bucket; just don't overwrite captures.
+
+### Solo workflow
+
+1. Display `reference_carrier.png` full-screen on your chosen screen
+   (set max brightness, disable night-light/blue-light filters).
+2. Take the 9 captures above with the S21 FE.
+3. Drop them into `phoxcar/spike8b/captures/raw/`.
+4. From the `phoxcar/spike8b/` directory, run:
+   ```
+   python3 analyze.py
+   python3 report.py
+   ```
+5. Read `results/SPIKE8B_REPORT.md`. Commit it to the branch and tell Claude.
+
+### Solo decision tree (what the result means)
+
+- **9/9 PASS** → real-world envelope is fine. Vince's session probably
+  unnecessary. P3.C is a research luxury, not a blocker. V1 ships on P3.A.
+- **7-8/9 PASS** with concentrated failure (e.g. only `tilt30` fails) →
+  one specific axis to investigate; targeted follow-up captures beat a
+  full matrix. Maybe one more solo session before involving Vince.
+- **4-6/9 PASS** → real-world is meaningfully harder than synthetic.
+  Worth a full multi-phone × multi-screen session to characterize.
+- **<4/9 PASS** → P3.A has a real-world brittleness we didn't predict.
+  Investigate before any further captures; we may need to fix something
+  in the encoder/decoder before more data helps.
+
+---
+
+## Full matrix (only if the solo pass surfaces something)
+
+The full session — multiple phones × multiple screens × the same 9 conditions —
+takes ~2 hours and is only worth doing if the solo pass tells us we need
+broader coverage. Don't pre-commit to this; let the solo data decide.
+
+## Equipment (full matrix)
+
+**Phones:** Samsung Galaxy S21 FE, Z Flip 4, S23 Ultra.
+**Screens:** MSI G27C4X (curved gaming monitor), Asus laptop screen.
 **Source PNG:** `phoxcar/spike8b/reference_carrier.png` (1280×1280, 8-bit grayscale).
 
 ---
@@ -39,24 +101,11 @@ informative datapoint of the entire Phase 1.
 
 ---
 
-## Capture matrix
+## Full capture matrix
 
-For **each (phone, screen) combination**, take **at least these captures**:
-
-| # | Distance | Angle | Lighting | Notes |
-|---|---|---|---|---|
-| 1 | "comfortable read" (~30-50 cm) | head-on | bright (room lights on) | the easy baseline |
-| 2 | "comfortable read" | head-on | dim (room lights off, screen-only) | photometric envelope test |
-| 3 | "comfortable read" | head-on | mixed (window backlight) | natural-light realism |
-| 4 | close (<20 cm — fills most of frame) | head-on | bright | minimum-distance test |
-| 5 | far (carrier fills ~25% of frame) | head-on | bright | maximum-distance test |
-| 6 | comfortable | tilted ~15° (rotate phone around vertical) | bright | small perspective tilt |
-| 7 | comfortable | tilted ~30° | bright | larger perspective tilt |
-| 8 | comfortable | rotated 90° (phone in landscape vs screen in portrait) | bright | rotation tolerance |
-| 9 | comfortable | head-on | bright | one HANDHELD shot (slight motion blur expected) |
-
-That's 9 captures × phones × screens. With 3 phones × 2 screens, that's **54 captures**.
-Add a few "what if" shots if you want (sunlight glare on screen, phone behind glass, etc.).
+For **each (phone, screen) combination**, take the same 9 conditions as the
+solo pass above. With 3 phones × 2 screens, that's **54 captures**. Add a few
+"what if" shots if you want (sunlight glare on screen, phone behind glass, etc.).
 
 **Time budget:** ~2 minutes per capture × 54 = ~2 hours. Take a break between phones.
 
