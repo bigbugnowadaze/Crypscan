@@ -1,0 +1,1677 @@
+{
+  "timestamp": "20260504T030646Z",
+  "spike_version": "P3A.0",
+  "substrate": "spike-7 codebook + pilots + ArUco fiducials @ 8-bit",
+  "payload_size": 1004,
+  "n_payload_germs": 514,
+  "canvas": [
+    1280,
+    1280
+  ],
+  "expected_sha256": "e7823f244ac33145d48b419494cfdac9afb3639c992c6b7e283f5acc180492ad",
+  "baseline_pass": true,
+  "conditions": [
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.33986396999989665
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 10,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3580072590000327
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 30,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.33744418000003407
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 60,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 3 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.27949627800001053
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "severity": 100,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 3 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.2824439739999889
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_y",
+      "severity": 0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3470475350000015
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_y",
+      "severity": 10,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.33458060999998906
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_y",
+      "severity": 30,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3365862590000006
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_y",
+      "severity": 60,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 3 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.28080329299996265
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_y",
+      "severity": 100,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 3 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.26960273899999265
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "subpixel",
+      "severity": 0.0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3385694920000333
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "subpixel",
+      "severity": 0.25,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.07063329281693789,
+        "b": 0.8584614135606662,
+        "gamma": 0.9949458743289871,
+        "fit_residual": 2.4139587780758
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.33865297699992425
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "subpixel",
+      "severity": 0.5,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06620511539558815,
+        "b": 0.8693809348997859,
+        "gamma": 0.9974128438154354,
+        "fit_residual": 2.4041632386457694
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.32944048700005624
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "subpixel",
+      "severity": 0.75,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.07017784188016758,
+        "b": 0.8597279485122759,
+        "gamma": 0.996045593267413,
+        "fit_residual": 2.360402343057212
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.31991656200000307
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.34953834299994924
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 5,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06957422993487102,
+        "b": 0.85804009458303,
+        "gamma": 0.9919806522361962,
+        "fit_residual": 2.4128541300041
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3088044209999907
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 15,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 0 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.24189223799999127
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 30,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 0 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.24724152500004948
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 45,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 0 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.23547248299996681
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 90,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528654945784193,
+        "b": 0.8692772217463632,
+        "gamma": 0.9973820854410198,
+        "fit_residual": 2.4037571680103658
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.34771693300001516
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 135,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 0 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.23680014899991875
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 180,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528654628672703,
+        "b": 0.8692772241584582,
+        "gamma": 0.9973820786130317,
+        "fit_residual": 2.4037571891115936
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3384860909999361
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "severity": 270,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.065286546208392,
+        "b": 0.869277223727087,
+        "gamma": 0.9973820781894149,
+        "fit_residual": 2.4037572033455916
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3341067869999961
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 0.5,
+      "sha256_ok": false,
+      "pose_ok": true,
+      "decode_error": "final decode failed: brotli: decoder failed",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.2719723169999497
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 0.7,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.11426209712118332,
+        "b": 0.7841741456752171,
+        "gamma": 1.0184876205783555,
+        "fit_residual": 3.125052234848329
+      },
+      "rs_corrected": 2,
+      "rs_failed": 0,
+      "wall_time_s": 0.28046606899999915
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 0.85,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.07603290895226197,
+        "b": 0.8524039520293456,
+        "gamma": 1.0037550308339858,
+        "fit_residual": 2.5640722972218817
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.2844710470000109
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.33760188999997354
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 1.18,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 0 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.28840130399999
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 1.4,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 1 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3010373150000305
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 1.7,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: missing markers: ['NW', 'NE', 'SW', 'SE']",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3242288709999457
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "severity": 2.0,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 1 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.28509637700005896
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "severity": 0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.33184013699997195
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "severity": 2,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06711344015261633,
+        "b": 0.864092097002924,
+        "gamma": 0.9943299298179489,
+        "fit_residual": 2.4108058213766013
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.32342072300002656
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "severity": 5,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06776986163235091,
+        "b": 0.8647176063703557,
+        "gamma": 0.9979433569394612,
+        "fit_residual": 2.388032061234673
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3373907310000277
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "severity": 10,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 2 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.26127851899991583
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "severity": 15,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 2 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.2961437159999605
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.37213085799999135
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 5,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06806275993177474,
+        "b": 0.8679903660694472,
+        "gamma": 1.0047459131331207,
+        "fit_residual": 2.1772768466423877
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.312892077000015
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 10,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.05688106178530602,
+        "b": 0.8870097134477984,
+        "gamma": 0.9988708113674902,
+        "fit_residual": 1.9073861934588325
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3053104839999605
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 20,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 2 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.23919811199994
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 30,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 3 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.23112741299996742
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "severity": 40,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 2 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.22996257399995557
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.34466572999997425
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 5,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06879431536011298,
+        "b": 0.8667097275957424,
+        "gamma": 1.0050669023506549,
+        "fit_residual": 2.2123700477349884
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.32003874000008636
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 10,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06875566953071477,
+        "b": 0.8681508944786657,
+        "gamma": 1.0070173040230763,
+        "fit_residual": 2.0140260892917428
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3157537089999778
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 20,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: missing markers: ['NE', 'SE']",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.25921860700009347
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 30,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 3 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.24215883800002302
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "severity": 40,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 2 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.25452945699998963
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rolling_shutter",
+      "severity": 0.0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.33608630200001244
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rolling_shutter",
+      "severity": 0.1,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: missing markers: ['SE']",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.2702150720000418
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rolling_shutter",
+      "severity": 0.3,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 3 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.26010321199999
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rolling_shutter",
+      "severity": 0.5,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 2 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.267538940999998
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rolling_shutter",
+      "severity": 1.0,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 1 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.24977287499996237
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rolling_shutter",
+      "severity": 1.5,
+      "sha256_ok": false,
+      "pose_ok": false,
+      "decode_error": "ArUco pose failed: detected 1 markers, need 4",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.2294786679999561
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.001,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06521647820569468,
+        "b": 0.8693598143962854,
+        "gamma": 0.9972863662571242,
+        "fit_residual": 2.4041722863360175
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3418793140000389
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.005,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06534305855615956,
+        "b": 0.8693361689351973,
+        "gamma": 0.9979364171401731,
+        "fit_residual": 2.407626687532941
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.34565919499993925
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.01,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.0660050906155502,
+        "b": 0.868797559500869,
+        "gamma": 0.9995939642020227,
+        "fit_residual": 2.41807580430344
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3369048440000597
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.02,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06719079360948013,
+        "b": 0.8678945900868593,
+        "gamma": 1.002887724064498,
+        "fit_residual": 2.4597278527397313
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.36167178900007
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.05,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.07218927320549597,
+        "b": 0.8640722980140428,
+        "gamma": 1.0155311247311023,
+        "fit_residual": 2.731390394376969
+      },
+      "rs_corrected": 1,
+      "rs_failed": 0,
+      "wall_time_s": 0.43487205999997514
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "severity": 0.1,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.08222328980051687,
+        "b": 0.855432735113691,
+        "gamma": 1.0389470028843706,
+        "fit_residual": 3.470760019414961
+      },
+      "rs_corrected": 2,
+      "rs_failed": 0,
+      "wall_time_s": 0.42883913200000734
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 95,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06497584691991261,
+        "b": 0.869644079666472,
+        "gamma": 0.9971075629009518,
+        "fit_residual": 2.4039439844379085
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3399609179999743
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 90,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06599643901661614,
+        "b": 0.8688004610771589,
+        "gamma": 0.9989851590005598,
+        "fit_residual": 2.4009797243749134
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.34294357900000705
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 75,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06783320885360242,
+        "b": 0.8669416003259686,
+        "gamma": 1.0017915042832772,
+        "fit_residual": 2.4161838708492707
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.35315857399996275
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 50,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.0664170332749602,
+        "b": 0.8662454566072986,
+        "gamma": 0.998488456889108,
+        "fit_residual": 2.4294624624936816
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.30894824199992854
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 30,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.07058968747606824,
+        "b": 0.8640745619313114,
+        "gamma": 1.0077642608933262,
+        "fit_residual": 2.478461437520753
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.2961004620000267
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "severity": 15,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.08058565872166987,
+        "b": 0.8503647859558331,
+        "gamma": 1.006633171174145,
+        "fit_residual": 2.5701464527638973
+      },
+      "rs_corrected": 1,
+      "rs_failed": 0,
+      "wall_time_s": 0.29588232900005096
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 0.3,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06636506436751327,
+        "b": 0.8682694280023007,
+        "gamma": 0.9993540446332009,
+        "fit_residual": 2.406515159106609
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.33083191999992323
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 0.6,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.0864464508134428,
+        "b": 0.8258998700173464,
+        "gamma": 0.993965517219412,
+        "fit_residual": 2.312155332332818
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3087939520000873
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.11631887065771267,
+        "b": 0.7645862264342357,
+        "gamma": 0.9878105001668063,
+        "fit_residual": 2.3009823917993195
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.2904464169999983
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 1.5,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.15719753739893105,
+        "b": 0.6817908071041932,
+        "gamma": 0.979504813052899,
+        "fit_residual": 2.3266190104350817
+      },
+      "rs_corrected": 2,
+      "rs_failed": 0,
+      "wall_time_s": 0.28206913999997596
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "severity": 2.0,
+      "sha256_ok": false,
+      "pose_ok": true,
+      "decode_error": "manifest claims 1987445250 payload germs but grid only has 664 slots after manifest+pilots",
+      "transform": null,
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.25891797199994926
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 0.7,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.1057797063955868,
+        "b": 0.8514256606769602,
+        "gamma": 0.7441958220005145,
+        "fit_residual": 2.1980324115820915
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3300221199999669
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 0.85,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.08306206275109237,
+        "b": 0.8630728546827746,
+        "gamma": 0.8726920167511648,
+        "fit_residual": 2.3155998217525915
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.32476831899998615
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3378556850000223
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 1.18,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.04890974274736598,
+        "b": 0.871449312380581,
+        "gamma": 1.1421942071504168,
+        "fit_residual": 2.4820310186406482
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3645156110000016
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "severity": 1.4,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.03385982655005405,
+        "b": 0.8696183978751368,
+        "gamma": 1.3160668483237836,
+        "fit_residual": 2.5550196314171716
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.35209829699999773
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": -0.1,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.007851856481626687,
+        "b": 0.8352375383572119,
+        "gamma": 1.0850163229808307,
+        "fit_residual": 2.407423967184505
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3459139400000595
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": -0.05,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.0271934814395005,
+        "b": 0.8586668576183152,
+        "gamma": 1.024468380981716,
+        "fit_residual": 2.4069402020004786
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3420760359999804
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": -0.02,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.0472924451018888,
+        "b": 0.8679980365461121,
+        "gamma": 1.0008422436517967,
+        "fit_residual": 2.4018140636523775
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3451865600000019
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": 0.02,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.08487239598866328,
+        "b": 0.8692616320070577,
+        "gamma": 0.9972758435158373,
+        "fit_residual": 2.403702704321949
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.34259436800005005
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": 0.05,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.1158074521721264,
+        "b": 0.8688500355191394,
+        "gamma": 0.9950056088635562,
+        "fit_residual": 2.4039146170523065
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3458999690000155
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "severity": 0.1,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.1634225104793883,
+        "b": 0.8650554162048997,
+        "gamma": 0.9768014933800715,
+        "fit_residual": 2.4188536502282822
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.34039198400000714
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 0.6,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.2394766275703121,
+        "b": 0.5214638469170323,
+        "gamma": 0.9987320029102913,
+        "fit_residual": 1.441643136900543
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.29578285100001267
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 0.7,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.19567359532804154,
+        "b": 0.6086405426859156,
+        "gamma": 0.9976502993232217,
+        "fit_residual": 1.6828803076865424
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3206657020000421
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 0.85,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.13059909524901306,
+        "b": 0.7387298710478645,
+        "gamma": 0.997482309814647,
+        "fit_residual": 2.0412751331756973
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3289975200000299
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 1.0,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06528655141319928,
+        "b": 0.8692772231638184,
+        "gamma": 0.9973820966670534,
+        "fit_residual": 2.4037571274900866
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.333228947000066
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 1.18,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.016844603771859076,
+        "b": 0.9972985736536989,
+        "gamma": 1.0452820972324968,
+        "fit_residual": 2.8500823137940365
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3369198289999531
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "severity": 1.4,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": -0.01634835460717538,
+        "b": 1.107362291410689,
+        "gamma": 1.1013338527167549,
+        "fit_residual": 3.4329104647204916
+      },
+      "rs_corrected": 2,
+      "rs_failed": 0,
+      "wall_time_s": 0.374374022999973
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.001,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06480685415582714,
+        "b": 0.8691487962738115,
+        "gamma": 0.9936227550793121,
+        "fit_residual": 2.4365736985468467
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.33606368499999917
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.005,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.06339882654412067,
+        "b": 0.8637640442106892,
+        "gamma": 0.9806340381842888,
+        "fit_residual": 2.601682313739117
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3525104639999199
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.01,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.060831914928319235,
+        "b": 0.8656698446300964,
+        "gamma": 0.9794608627844507,
+        "fit_residual": 2.682458881360535
+      },
+      "rs_corrected": 0,
+      "rs_failed": 0,
+      "wall_time_s": 0.3420636260000265
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.02,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.0711553738595939,
+        "b": 0.8432872010345029,
+        "gamma": 0.9732889737998007,
+        "fit_residual": 3.1080488080661666
+      },
+      "rs_corrected": 1,
+      "rs_failed": 0,
+      "wall_time_s": 0.3439831170001071
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "severity": 0.05,
+      "sha256_ok": true,
+      "pose_ok": true,
+      "decode_error": null,
+      "transform": {
+        "a": 0.1087231991655868,
+        "b": 0.7983513730949618,
+        "gamma": 1.0290497324503576,
+        "fit_residual": 4.079832854435979
+      },
+      "rs_corrected": 2,
+      "rs_failed": 0,
+      "wall_time_s": 0.33729156699996565
+    }
+  ],
+  "per_type_summary": [
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_x",
+      "passing": [
+        0,
+        10,
+        30
+      ],
+      "failing": [
+        60,
+        100
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "translation_y",
+      "passing": [
+        0,
+        10,
+        30
+      ],
+      "failing": [
+        60,
+        100
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "subpixel",
+      "passing": [
+        0.0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "failing": []
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rotation",
+      "passing": [
+        0,
+        5,
+        90,
+        180,
+        270
+      ],
+      "failing": [
+        15,
+        30,
+        45,
+        135
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "scale",
+      "passing": [
+        0.7,
+        0.85,
+        1.0
+      ],
+      "failing": [
+        0.5,
+        1.18,
+        1.4,
+        1.7,
+        2.0
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "shear",
+      "passing": [
+        0,
+        2,
+        5
+      ],
+      "failing": [
+        10,
+        15
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_x",
+      "passing": [
+        0,
+        5,
+        10
+      ],
+      "failing": [
+        20,
+        30,
+        40
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "tilt_y",
+      "passing": [
+        0,
+        5,
+        10
+      ],
+      "failing": [
+        20,
+        30,
+        40
+      ]
+    },
+    {
+      "sweep": "geometric",
+      "noise_type": "rolling_shutter",
+      "passing": [
+        0.0
+      ],
+      "failing": [
+        0.1,
+        0.3,
+        0.5,
+        1.0,
+        1.5
+      ]
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gaussian_intensity",
+      "passing": [
+        0.001,
+        0.005,
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ],
+      "failing": []
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "jpeg_roundtrip",
+      "passing": [
+        15,
+        30,
+        50,
+        75,
+        90,
+        95
+      ],
+      "failing": []
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "focus_blur",
+      "passing": [
+        0.3,
+        0.6,
+        1.0,
+        1.5
+      ],
+      "failing": [
+        2.0
+      ]
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "gamma_correction",
+      "passing": [
+        0.7,
+        0.85,
+        1.0,
+        1.18,
+        1.4
+      ],
+      "failing": []
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "brightness_shift",
+      "passing": [
+        -0.1,
+        -0.05,
+        -0.02,
+        0.02,
+        0.05,
+        0.1
+      ],
+      "failing": []
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "contrast_scale",
+      "passing": [
+        0.6,
+        0.7,
+        0.85,
+        1.0,
+        1.18,
+        1.4
+      ],
+      "failing": []
+    },
+    {
+      "sweep": "photometric",
+      "noise_type": "salt_and_pepper",
+      "passing": [
+        0.001,
+        0.005,
+        0.01,
+        0.02,
+        0.05
+      ],
+      "failing": []
+    }
+  ]
+}
