@@ -1,0 +1,69 @@
+# ============================================================
+# Aurexis Vision Vocabulary - phoxoid_field extension v0.1.0
+#
+# Predicates over the canonical phoxoid_field dtype, registered
+# via vision_ops_phoxoid.register_phoxoid_ops().
+#
+# Loading this file via the intake CLI accepts each predicate
+# into the vision vocabulary. Append (don't replace) to the
+# existing vocab.aurex.
+# ============================================================
+
+
+predicate has_dominant_fold_catastrophe
+  expects field:phoxoid_field
+  returns bool
+  intent  fold_catastrophe_dominates_field
+  body    eq(dominant_germ_type(field), label("fold"))
+
+
+predicate has_dominant_cusp_catastrophe
+  expects field:phoxoid_field
+  returns bool
+  intent  cusp_catastrophe_dominates_field
+  body    eq(dominant_germ_type(field), label("cusp"))
+
+
+predicate is_flat_field
+  expects field:phoxoid_field
+  returns bool
+  intent  field_germ_coefficients_near_zero
+  body    eq(dominant_germ_type(field), label("flat"))
+
+
+predicate has_curvature_axis_x
+  expects field:phoxoid_field
+  returns bool
+  intent  cylindrical_curvature_along_x_axis
+  body    eq(field_curvature_axis(field), label("x"))
+
+
+predicate has_curvature_axis_y
+  expects field:phoxoid_field
+  returns bool
+  intent  cylindrical_curvature_along_y_axis
+  body    eq(field_curvature_axis(field), label("y"))
+
+
+predicate has_no_dominant_curvature
+  expects field:phoxoid_field
+  returns bool
+  intent  no_axis_signal_in_field_germ_distribution
+  body    eq(field_curvature_axis(field), label("none"))
+
+
+# ============================================================
+# Composition predicates
+# ============================================================
+
+
+predicate fields_compose_consistently
+  expects field_a:phoxoid_field, field_b:phoxoid_field
+  returns bool
+  intent  two_phoxoid_fields_compose_without_cohomology_violation
+  body    gt(quality_of(compose_fields(field_a, field_b)), 0.5)
+# NOTE for Vince: the `quality_of` operator is not yet in vision_ops.
+# v0.1.0 ships this predicate as a placeholder pointing at the
+# composition interface; full evaluation requires a quality_of
+# accessor to be added to ops in coordination with the field-level
+# confidence semantics in phoxoid_field/types.py field_level_confidence.
